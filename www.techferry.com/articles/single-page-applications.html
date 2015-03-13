@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Single Page Applications</title>  
+    <script src="../js/jquery-1.5.1.min.js"></script>
+    <link rel="StyleSheet" href="../css/redmond/jquery-ui-1.8.14.custom.css" type="text/css" /> 
+    <link href="../css/article.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery.validationEngine-en.js" type="text/javascript"></script>
+	<script src="../js/jquery.validationEngine.js" type="text/javascript"></script>
+	<link href="../css/validation.css" rel="stylesheet" type="text/css" /> 
+	<link rel="Shortcut Icon" href="../images/favicon.ico" type="image/x-icon" /> 
+
+<meta name="keywords" content="Single Page Applications" />
+<meta name="keyphrases" content="Single Page Applications" />
+<meta name="description" content="Single Page Applications" />
+   
+    <script>
+	    $(document).ready(function(){
+	    	var hc = $($.ajax({url: "header.html", async: false}).responseText);
+	    	$('#header').html(hc);
+            var fc = $($.ajax({url: "footer.html", async: false}).responseText);
+            $('#footer').html(fc);
+	    });
+    </script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27684656-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<style>
+body{
+font-family: normal, sans-serif;
+}
+h2 {
+color: #bf0000;
+}
+h3 {
+color: #1465de;
+}
+li{
+margin-top: 3px;
+}
+</style>
+
+</head>
+<body>  
+<center>
+<table width="1000px"><tr><td>
+<div id="header"></div>
+<div class="topbar">
+<a href="http://www.techferry.com/" title="TechFerry: Your ferry to success">Home</a> 
+&gt; <a href="index.html" title="TechFerry Articles">Articles</a>
+&gt; <a href="single-page-applications.html" title="Single Page Applications">Single Page Applications</a>
+</div>
+
+
+<ul>
+<li><a href="single-page-applications.html#spa">What is a Single Page Application (SPA)</a></li>
+<li><a href="single-page-applications.html#how-to-achieve">How is it achieved?</a></li>
+<li><a href="single-page-applications.html#behavioral">Behavioral difference from traditional web applications</a></li>
+<li><a href="single-page-applications.html#when-to-go-for-SPA">When to go for Single Page Application?</a></li>
+<li class="plus"><a href="single-page-applications.html#challenges-with-SPA">Challenges with Single Page Applications</a></li>
+<ul>
+<li><a href="single-page-applications.html#seo">Search Engine Optimization (SEO)</a></li>
+<li><a href="single-page-applications.html#security">Security</a></li>
+<li><a href="single-page-applications.html#browser-history">Browser history</a></li>
+</ul>
+<li class="btn"><a href="single-page-applications.html#other-considerations">Other Considerations</a>
+<ul class="h">
+<li><a href="single-page-applications.html#performance-considerations">Performance Considerations</a></li>
+<li><a href="single-page-applications.html#minification">Minification</a></li>
+<li><a href="single-page-applications.html#browser-considerations">Browser considerations</a></li>
+</ul>
+</li>
+<li class="btn"><a href="single-page-applications.html#technical-approaches">Technical Approaches</a>
+<ul>
+<li><a href="single-page-applications.html#client-Side-templates">Client-Side Templates</a></li>
+<li><a href="single-page-applications.html#chunking">Chunking</a></li>
+<li><a href="single-page-applications.html#controllers">Controllers</a></li>
+<li><a href="single-page-applications.html#routing">Routing</a></li>
+<li><a href="single-page-applications.html#real-time-communication">Real-time communication</a></li>
+<li><a href="single-page-applications.html#local-storage">Local storage</a></li>
+</ul>
+</li>
+<li><a href="single-page-applications.html#other">Other design approaches to consider</a></li>
+<li><a href="single-page-applications.html#reference">References</a></li>
+</ul>
+
+<h2 id="spa">What is a Single Page Application (SPA)</h2>
+
+<p>SPA is a web application design approach that uses modern browsers and HTML 5 to shift UI and application logic from web servers to browsers end. The web page app (HTML, JavaScript, and CSS) is retrieved with a single page load, or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions. The page does not reload at any point in the process, nor does control transfer to another page.</p>
+
+<img src="images/spa.jpg" />
+
+
+<h2 id="how-to-achieve">How is it achieved?</h2>
+<p>Single page apps are distinguished by their ability to redraw any part of the UI without requiring a server roundtrip to retrieve HTML. This is achieved by separating the data from the presentation of data by having a model layer that handles data and a view layer that reads from the models.</p> 
+
+<p>Two-way communication of a client application and web server replaces one-way requests from a browser (HTML 5 Web Sockets, Socket.io, SignalR). </p>
+
+<p>Local storage capabilities of storing data on a browser for performance and offline access replace cookies and intensive data loads from web server (HTML 5 Local storage).</p>
+
+
+<h2 id="behavioral">Behavioral difference from traditional web applications</h2>
+<ul>
+<li>Client must enable javascript.</li>
+<li>There is only one entry point to the site. Link to a specific part of site is not possible.</li>
+<li>Dysfunctional back and forward buttons as the application does not change pages, it changes state. Browsers were not designed to record change in states, they record pages. But this can be handled with additional effort.</li>
+<li>Can't reload a page, a sudden loss of network takes you back to the start of the site.</li>
+<li>Mobile experience - Take very long to load. Don't function at all.</li>
+<li>Can be downloaded and run from a local file with browser based storage (HTML5 storage).</li>
+<li>Real-time communication two-way communication of a client application and web server replaces one-way requests from a browser (HTML 5 Web Sockets, Socket.io, SignalR) </li>
+<li>Local storage capabilities of storing data on a browser for performance and offline access replace cookies and intensive data loads from web server (HTML 5 Local storage).</li></ul>
+
+<h2 id="when-to-go-for-SPA">When to go for Single Page Application?</h2>
+
+<ul> 
+<li>Native/Desktop like application experience is desired.</li>
+<li>Highly responsive site is desired. Real time communication.</li>
+<li>Supports tons of rich UI components in multiple states on same page very efficiently.</li>
+</ul>
+
+<h2 id="challenges-with-SPA">Challenges with Single Page Applications</h2>
+<h3 id="seo">Search Engine Optimization (SEO)</h3>
+<p>SEO compatibility for an SPA is NOT automatically achieved. The crawlers for Search Engines ignore Javascript in the web page, posing problem for public facing sites to adopt SPA. Specific handling can overcome this challenge. <techferry article="" link=""></techferry></p>
+
+<p>One way could be to put hash fragments in URLs embedded in an SPA. Such URLs are crawled by some search engines (not all) like Google. Another approach used by server centric web frameworks like the Java based ItsNat is to render any hypertext in server. Developers can decide which page states must be crawlable by web spiders for SEO and be able to generate the required state in load time generating plain HTML instead of JavaScript.</p>
+
+<h3 id="security">Security</h3>
+<p>Single Page Apps are a little extra vulnerable to both Cross-Site Scripting (XSS) attacks and Cross-Site Request Forgery (CSRF) attacks. We have to be little extra cautious while building SPA, to defuse such attacks though server side apps are also vulnerable.</p>
+<a target="_blank" href="http://stephenwalther.com/archive/2013/03/05/security-issues-with-single-page-apps">http://stephenwalther.com/archive/2013/03/05/security-issues-with-single-page-apps</a> 
+
+<h3 id="browser-history">Browser history</h3>
+<p>With an SPA, by definition, "a single page", the model breaks the browser's design for page history navigation using the Forward/Back buttons. This presents a usability impediment when a user presses the back button, expecting the previous screen state within the SPA, but instead the application's single page unloads and the previous page in the browser's history is presented.</p>
+<p>The traditional solution for SPA's has been to change the browser URL's hash fragment identifier in accord with the current screen state. This can be achieved with JavaScript, and causes URL history events to be built up within the browser. As long as the Single Page Application is capable of resurrecting the same screen state from information contained within the URL hash, the expected back button behavior is retained.</p>
+<p>To further address this issue, the HTML5 specification has introduced pushState and replaceState providing programmatic access to the actual URL and browser history.</p>
+
+
+<h2 id="other-considerations">Other Considerations</h2>
+<h3 id="performance-considerations">Performance Considerations</h3>
+<p>Performance should be on your mind as you build and add features to your app. If you encounter a performance issue, you should first profile the app. The Webkit inspector offers a built-in profiler that can provide a comprehensive report for CPU, memory and rendering bottlenecks. </p>
+<p>Some common performance improvements include:</p>
+<ul>
+<li>Simplify CSS selectors to minimize recalculation and layout costs.</li>
+<li>Minimize DOM manipulations and remove unnecessary elements.</li>
+<li>Avoid data bindings when the number of DOM elements run into hundreds.</li>
+<li>Clean up event handlers in view instances that are no longer needed.</li>
+<li>Try to generate most of the HTML on the server-side. Once on the client, create the backing view with the existing DOM element.</li>
+<li>Have region-specific servers for faster turn around.</li>
+<li>Use CDNs for serving libraries and static assets.</li>
+<li>Analyze your web page with tools like YSlow and take actions outlined in the report.</li>
+</ul>
+
+<h3 id="minification">Minification</h3>
+<p>Before deploying your application, it's a good idea to combine all of your scripts into a single file; the same can be said for your CSS. This step is generally referred to as minification, and it aims to reduce the number of HTTP requests and the size of your scripts.</p>
+<p>You can minify JavaScript and CSS with: RequireJS optimizer, UglifyJS, and Jammit. They also combine your images and icons into a single sprite sheet for even more optimization.</p>
+<h3 id="browser-considerations">Browser considerations</h3>
+<p>There are a variety of browsers that we must support. Libraries, like jQuery and Zepto, already abstract the DOM manipulation API, but there are other differences in JavaScript and CSS, which require extra effort on our parts. The following guidelines can help you manage these differences:</p>
+<ul>
+<li>Use a tool, like Sauce Labs or BrowserStack to test the website on multiple browsers and operating systems.</li>
+<li>Use polyfills and shims, such as es5shim and Modernizr to detect if the browser supports a given feature before calling the API.</li>
+<li>Use CSS resets, such as Normalize, Blueprint, and Eric Myer's Reset to start with a clean slate look on all browsers.</li>
+<li>Use vendor prefixes (-webkit-, -moz-, -ms-) on CSS properties to support different rendering engines.</li>
+<li>Use browser compatibility charts, such as findmebyIP and canIuse.</li>
+</ul>
+<p>Managing browser differences may involve a bit of trial and error.</p>
+
+
+<h2 id="technical-approaches">Technical Approaches </h2>
+<h3 id="client-Side-templates">Client-Side Templates</h3>
+<p>The most popular JavaScript-based templating systems are Underscore templates and Handlebars. </p>
+<p>EmberJS has built-in support for Handlebars. However, you do have to consider a templating engine if you decide to use a lean framework, such as Backbone. Underscore is an excellent starting point, if you have limited templating requirements. Otherwise, Handlebars works great for more advanced projects. It also offers many built-in features for more expressive templates.</p>
+<p>If you find that you require a large number of client-side templates, you can save some computation time by pre-compiling the templates on the server. Pre-compilation gives you plain JavaScript functions that you invoke to improve the load time of the page. Handlebars supports pre-compilation, making it worth the time and effort to fully explore.</p>
+<p>ExpressJS users can even use the same templating engine on the client as on the server, giving you the benefit of sharing your templates between both the client and server.</p>
+<h3 id="chunking">Chunking</h3>
+<p>The web page is constructed by loading chunks of HTML fragments and JSON data instead of receiving full HTML from a web server on every request. (Backbone.js, pjax, jQuery, Upshot.js)</p>
+
+<h3 id="controllers">Controllers</h3>
+Mess of JavaScript code that handles tangled DOM and data manipulations, application logic and AJAX calls is replaced by controllers that separate views and models using MVC or MVVM patterns. (Backbone.js, Knockout.js, JavascriptMVC) 
+
+<h3 id="routing">Routing</h3>
+Selection of views and navigation (without page reloads) that preserves page state, elements and data (History.js, Crossroads.js, Backbone.js, pjax, HTML5 History API)
+
+<h3 id="real-time-communication">Real-time communication</h3>
+Two-way communication of a client application and web server replaces one-way requests from a browser (HTML 5 Web Sockets, Socket.io, SignalR) 
+
+<h3 id="local-storage">Local storage</h3>
+Capabilities of storing data on a browser for performance and offline access replace cookies and intensive data loads from web server (HTML 5 Local storage). Can be downloaded and run from a local file with browser based storage (HTML5 storage)
+
+<h3 id="other">Other design approaches to consider</h3>
+<ul>
+<li>AJAX</li>
+<li>Browser plugins</li>
+<li>Data transport (XML, JSON and AJAX)</li>
+<li>Thin server architecture</li>
+<li>Thick stateful server architecture</li>
+<li>Thick stateless server architecture</li>
+</ul>
+
+<h2 id="reference">References</h2>
+<ol><li>
+<a href="http://code.tutsplus.com/tutorials/important-considerations-when-building-single-page-web-apps--net-29356">http://code.tutsplus.com/tutorials/important-considerations-when-building-single-page-web-apps--net-29356</a>
+</li>
+<li><a href="http://stephenwalther.com/archive/2013/03/05/security-issues-with-single-page-apps">http://stephenwalther.com/archive/2013/03/05/security-issues-with-single-page-apps </a></li>
+<li><a href="ExtJS-vs-AngularJS.html">http://www.techferry.com/articles/ExtJS-vs-AngularJS.html</a></li>
+</ol>
+
+<br/><br/>
+<div id="footer" />
+</td></tr></table>
+</center>
+
+  
+</body></html>

@@ -1,0 +1,154 @@
+body {
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.wrapper {}
+
+@media only screen and (max-width: 1160px) {
+#pageshare {display:none;}
+}
+
+#main {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left:10%;
+     margin-right:10%;
+}
+
+#items {
+	 margin-left:50px;
+}
+#introduction{
+	margin-left:65px;
+	  text-align: justify;
+}
+
+ 
+#items #heading {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: transparent;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(0, 0, 0, 0.1), 0 3px 1px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 0 #DDDDDD;
+    margin: 10px;
+    float: left;
+}
+#items .item {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: linear-gradient(to bottom, #F6F6F6 0%, #EAEAEA 100%) repeat scroll 0 0 transparent;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(0, 0, 0, 0.1), 0 3px 1px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 0 #DDDDDD;
+    width: 270px;
+    margin: 10px;
+    float: left;
+}
+
+#items .item .item-content {
+  padding: 10px;
+}
+
+#items .item .picture .description {
+    margin-top: 10px;
+}
+
+#items .item .meta span {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    margin-right: 5px;
+}
+
+#items .item .picture {
+    display: block;
+    position: relative;
+    z-index: 5;
+    border-top: 1px solid #999999;
+    border-radius: 4px 4px 4px 4px;
+}
+
+#items .item .picture a.image {
+    display: block;
+    height: 200px;
+    width: 100%;
+}
+
+#items .item .picture img {
+    border-radius: 2px 2px 0px 0px;
+    height: 200px;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.picture img {
+    height: 200px;
+}
+.item {
+	overflow:hidden;
+}
+
+
+.navbar-inner {
+  box-shadow: 0px 5px 10px #999 !important;
+}
+
+
+/* RESPONSIVE CSS HACKS
+ -------------------------------------------------- */
+ @media (max-width: 768px) {
+  #main {
+    margin-top: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 1160px) {
+#pageshare {display:none;}
+}
+@media only screen and ( max-device-width: 480px) {
+ #items #heading{
+		width:100%px;
+		background: transparent;
+	}
+	#introduction{
+		width:100%;
+	}
+ }
+ @media only screen and (min-width: 481px) and  (max-width: 799px) {
+ #items #heading{
+		width:90%;
+		background: transparent;
+	}
+	#introduction{
+		width:90%;
+	}
+ }
+ 
+ @media only screen and (min-width: 800px) {
+	#items #heading{
+		width:80%;
+		background: transparent;
+	}
+	#introduction{
+		width:80%;
+	}
+ }
+
+
+
+#pageshare {position:fixed; bottom:24%; left:3px; float:left; border: 1px solid black; border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;background-color:#eff3fa;padding:0 0 1 0;z-index:10;}
+#pageshare .sbutton {float:left;clear:both;margin:3px 3px 10px 3px;}
+#pageshare .floatbutton {float:left;clear:both;margin:3px 3px 3px 3px;}
+.fb_share_count_top {width:48px !important;}
+.fb_share_count_top, .fb_share_count_inner {-moz-border-radius:3px;-webkit-border-radius:3px;}
+.FBConnectButton_Small, .FBConnectButton_RTL_Small {width:49px !important; -moz-border-radius:3px;-webkit-border-radius:3px;}
+.FBConnectButton_Small .FBConnectButton_Text {padding:2px 2px 3px !important;-moz-border-radius:3px;-webkit-border-radius:3px;font-size:8px;}

@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ExtJS vs AngularJS</title>  
+    <script src="../js/jquery-1.5.1.min.js"></script>
+    <link rel="StyleSheet" href="../css/redmond/jquery-ui-1.8.14.custom.css" type="text/css" /> 
+    <link href="../css/article.css" rel="stylesheet" type="text/css" />
+    <link href="../css/comparison.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery.validationEngine-en.js" type="text/javascript"></script>
+	<script src="../js/jquery.validationEngine.js" type="text/javascript"></script>
+	<link href="../css/validation.css" rel="stylesheet" type="text/css" /> 
+	<link rel="Shortcut Icon" href="../images/favicon.ico" type="image/x-icon" />
+
+<meta name="keywords" content="ExtJS vs AngularJS, ExtJS vs Angular.js comparison"  />
+<meta name="keyphrases" content="ExtJS vs AngularJS, ExtJS vs Angular.js comparison"  />
+<meta name="description" content="ExtJS vs AngularJS. ExtJS and AngularJS are the two industry leading frameworks for Rich UI development. 
+This article compares these two frameworks over 30+ points around benefits, architecture, testing, mobility, performance, build and deployment among other things. "  />
+   
+    <script>
+	    $(document).ready(function(){
+	    	var hc = $($.ajax({url: "header.html", async: false}).responseText);
+	    	$('#header').html(hc);
+            var fc = $($.ajax({url: "footer.html", async: false}).responseText);
+            $('#footer').html(fc);
+	    });
+    </script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27684656-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>  
+<center>
+<table width="1000px"><tr><td>
+<div id="header"></div>
+<div class="topbar">
+<a href="http://www.techferry.com/" title="TechFerry: Your ferry to success">Home</a> 
+&gt; <a href="index.html" title="TechFerry Articles">Articles</a>
+&gt; <a href="ExtJS-vs-AngularJS.html" title="ExtJS vs AngularJS">ExtJS vs AngularJS</a>
+</div>
+<h2 style="color:#bf0000">ExtJS vs AngularJS</h2>
+
+<table width=1000 align=center cellpadding=0 cellspacing=0 border=0 class="front">
+<tr>
+<td colspan=5>
+<p align="justify" style="margin: 0 0 0 0 ">
+ExtJS and AngularJS are the two industry leading frameworks for Rich UI development. 
+<a href="http://www.techferry.com" target="_blank">TechFerry</a> has had a chance to develop multiple Rich UI single page applications using both ExtJS and AngularJS.
+This articles pens down our experience working with these two technologies for multiple applications. 
+It compares ExtJS and AngularJS over 30+ points around benefits, architecture, testing, mobility, performance, build and deployment among other things.
+</p>
+
+
+</td>
+</tr>
+<tr>
+<td width=50%>
+<p align="justify">
+We developed a test application in both ExtJS and AngularJS to understand architectural details
+and to conduct detailed performance comparison tests.
+For performance results, we used similar set of components, adopted prescribed build processes to make sure we are comparing apples to apples.
+<br/><br/>
+ExtJS vs AngularJS:
+<ul>
+<li><a href="ExtJS-vs-AngularJS.html#briefCompare"> Feature Comparison</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#performance">Performance Comparison Stats</a> </li>
+<li><a href="ExtJS-vs-AngularJS.html#insights">When to use which framework</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#architecture">Architectural Differences</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#next">Next Steps</a></li>
+</ul>
+</p>
+</td>
+
+<td width=25% valign=top style="padding:7px 0 0 7px">
+<div  class="senchaColor">
+<center><h3 style="color:#197319;"><a name="intro" ><img src="images/sencha-logo.png" height=50 style="vertical-align:middle;" /> Sencha Ext JS</a></h3></center>
+<ul><li>Industry's most powerful Rich UI application development framework</li>
+<li> Unparalleled cross-browser compatibility</li>
+<li> Advanced MVC architecture</li>
+<li> Plugin-free charting</li>
+<li>Modern UI widgets</li>
+</ul>
+</div>
+</td>
+
+<td width=25% valign=top style="padding:7px 0 0 7px" >
+<div class="angularColor">
+<center><h3 style="color:#CD3333;"><img src="images/angular-logo.jpeg" height=50 style="vertical-align:middle;"> AngularJS</h3></center>
+<ul><li>HTML enhanced for web apps!</li>
+<li>Fully extensible and works well with other libraries.</li>
+<li>Open-source JavaScript framework, maintained by Google</li>
+<li>Declarative programming approach</li>
+</ul>
+</div>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td colspan=3><h3><a name="briefCompare">Comparison of Sencha ExtJS and AngularJS </a></h3>
+</td>
+</tr>
+<tr><td colspan=5>
+ <div class="datagrid">
+<table  width=100% border=1 id="comparisonTable">
+
+<thead>
+<tr>
+ <th align=left width=6% >Sno</th>
+<th align=left width=30%>Features</th>
+<th width=32% align=left>ExtJS</th>
+<th align=left width=32%>AngularJS</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>1.</td>
+<td><a href="ExtJS-vs-AngularJS.html#components">One stop shop for rich UI applications</a></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center><span style="color:red"> &#10008;</span></center></td>
+
+</tr>
+<tr>
+<td>2.</td>
+<td><a href="ExtJS-vs-AngularJS.html#components">Rich suite of theme-able UI components</a></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td>Fortunately, there are a number of open source and 
+commercial components which provide integration for AngularJS including AngularUI, AngularUI Bootstrap,
+ Kendo (and Angular-Kendo), Wijmo and others.</td>
+ 
+ </tr>
+  <tr>
+  <td>3.</td>
+<td>Designed for Single page apps</td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Cross browser compatibility</td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td>AngularJS relies on jqLite/jQuery that provides cross-browser compatibility.
+However integration with 3rd party libraries may require cross browser compatibility.
+<br/> <b>Note:</b> AnugularJS (1.3 and above) has dropped IE8 support while Sencha ExtJS 5 will continue to support IE8.
+If IE8 support is a requirement for your enterprise customers, ExtJS should be considered.
+</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Charts</td>
+<td>ExtJS standalone charts are the industry's most powerful and most advanced, are plugin free and 
+sufficient for most business applications.</td>
+<td>AngularJS D3 Charts which are basically the integration with D3 charts makes its presence amazing in charting and graphing capabilities.
+Fall in love with D3 charts at <a href="http://d3js.org" target="_blank">D3.js</a>.
+</td>
+</tr>
+<tr>
+<td>6.</td>
+<td >Learning curve</td>
+<td ><center>High</center></td>
+<td><center>Medium</center></td>
+</tr>
+  <tr>
+ <td colspan=4 bgcolor="#ff5555" class="title">
+ Architecture
+ </td>
+ </tr>
+ 
+<tr>
+<td>7.</td>
+<td><a href="ExtJS-vs-AngularJS.html#designFramework">Application Design Framework</a></td>
+<td>ExtJS 5 supports both MVC (Model-View-Controller) and MVVM (Model-View-ViewModel)</td>
+<td><center>MVW (Model-View-Whatever).<br/> It can support popular 
+ patterns such as Model-View-Controller or Model-View-ViewModel</center></td>
+</tr>
+
+<tr>
+<td>8.</td>
+<td>Dependency Injection</td>
+<td>Ext JS can be augmented with Deft JS to add an Inversion of Control (IoC) container,
+ for dependency injection </td>
+ <td><center> <font style="color:blue">&#10004;</font></center></td>
+</tr>
+<tr>
+<td>9.</td>
+<td><a href="ExtJS-vs-AngularJS.html#data">Two way data binding</a></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+</tr>
+<tr>
+<td>10.</td>
+<td>Direct Dom manipulation</td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+</tr>
+<tr>
+<td>11.</td>
+<td><a href="ExtJS-vs-AngularJS.html#modular">Modular</a></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+</tr>
+<tr>
+ <td colspan=4 bgcolor="#ff5555" class="title">
+ Testing
+ </td>
+ </tr>
+<tr>
+<td>12.</td>
+<td><a href="ExtJS-vs-AngularJS.html#testing">Automated testing Support</a></td>
+<td>Possible with external tools.</td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+
+</tr>
+<tr>
+<td>13.</td>
+<td><a href="ExtJS-vs-AngularJS.html#testing">Testing framework or Test runner</a></td>
+<td>Several popular third-party JavaScript testing frameworks such as Siesta (optimized specifically
+ for Ext JS), Jasmine and Mocha are being used for testing.</td>
+<td>AngularJS ships with its own end-to-end test runner (Karma) to facilitate integration testing.
+Protractor is end to end test framework for Angular apps.</td>
+
+</tr>
+<tr>
+ <td colspan=4 bgcolor="#ff5555" class="title">
+Performance
+ </td>
+ </tr>
+ <tr>
+ <td>14.</td>
+<td>Dom Approach</td>
+<td>Depth-First, Bottom-Up approach</td>
+<td>Directives are linked in a Depth-First, Bottom-Up approach to the DOM 
+(Document Object Model) tree.
+Controllers are linked in a top-down manner.
+</td>
+</tr>
+<tr>
+<td>15.</td>
+<td><a href="ExtJS-vs-AngularJS.html#performance">Performance</a></td>
+<td> Higher footprint/weight and hence ExtJS is comparetively slower.</td>
+<td>In our performance tests, AngularJS was 3 times lighter than ExtJS. See <a href="ExtJS-vs-AngularJS.html#performance">Performance comparison stats</a>.</td>
+</tr>
+
+<tr>
+<td>16.</td>
+<td>Lightweight - small download footprint</td>
+<td><center><span style="color:red"> &#10008;</span></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+
+</tr>
+<tr>
+ <td colspan=4 bgcolor="#ff5555" class="title">
+Mobility
+ </td>
+ </tr>
+<tr>
+<td>17.</td>
+<td>Mobile support for web applications</td>
+<td>Sencha recommends using Sencha Touch for mobile versions of the application. Components like NestedList are far better than Grids for usability on mobile devices. However, this may mean separate effort for mobile versions of your app.</td>
+<td>Responsive web apps using ng-touch library, angular-gestures and angularJS responsive modules. </td>
+</tr>
+
+<tr>
+<td>18.</td>
+<td>Cross platform native mobile applications/Hybrid apps</td>
+<td>Possible with Sencha Touch and Apache Cordova/Phonegap integration. </td>
+<td>Possible with Trigger.io, Cordova/Phonegap integration, 
+	Ionic framework which is optimized for AngularJS and is used for developing rich 
+	and robust mobile applications.</td>
+
+</tr>
+<tr>
+<td>19.</td>
+<td>Mobile sites</td>
+<td>Sencha touch is used to develop mobile sites.</td>
+<td>AngularJS responsive modules (angular-responsive, angular-deckgrid etc),
+ UI Bootstrap, AngularJS responsive directives, angular-gestures and the 
+ngTouch library.</td>
+</tr>
+
+<tr>
+ <td colspan=4 bgcolor="#ff5555" class="title">
+Routing 
+ </td>
+ </tr>
+<tr>
+<td>20.</td>
+<td><a href="ExtJS-vs-AngularJS.html#linking">Built in router</a></td>
+<td><center><span style="color:blue"> &#10004;</span> <br/>Introduced in ExtJS 5</center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+
+</tr>
+<tr>
+<td>21.</td>
+<td>Deep linking</td>
+<td><center><span style="color:blue"> &#10004;</span><br/>Introduced in ExtJS 5</center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+
+</tr>
+<tr>
+<td>22.</td>
+<td>Browser history, forward and back buttons Support</td>
+<td><center><span style="color:blue"> &#10004;</span><br/>Introduced in ExtJS 5. <br/> Possible through Ext.util.History in earlier versions.</center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+
+</tr>
+<tr>
+<td>23.</td>
+<td>Browser's bookmark support</td>
+<td><center><span style="color:blue"> &#10004;</span><br/>Introduced in ExtJS 5</a></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+
+</tr>
+<tr>
+<td>24.</td>
+<td><a href="ExtJS-vs-AngularJS.html#seo">SEO support</a></td>
+<td>Most of the single page apps which work behind authentication may not require indexing for SEO. 
+For public pages, either you can use static HTML/CSS or if you do need to use dynamic content, consider <a href="ExtJS-vs-AngularJS.html#seo">Ajax
+based SEO</a>.</td>
+<td>Consider Ajax based SEO with either Prerender.io or headless browser support in your web-server.</td>
+</tr>
+
+
+
+
+
+<tr>
+ <td colspan=4 bgcolor="#ff5555" class="title">
+Deployment
+ </td>
+ </tr>
+<tr>
+<td>25.</td>
+<td>Build tools</td>
+<td>Sencha cmd tools for ExtJS 4.x+ and <br/>Sencha sdk tools for upto ExtJS 3.x</td>
+<td>3rd party Grunt tool</td>
+</tr>
+<tr>
+<td>26.</td>
+<td>Package Manager tools</td>
+<td>Sencha cmd tools</td>
+<td>Yeoman, Grunt and Bower</td>
+</tr>
+
+<tr>
+ <td colspan=4 bgcolor="#ff5555" class="title">
+Licensing and Support
+ </td>
+ </tr>
+<tr>
+<td>27.</td>
+<td>License: open source or commercial</td>
+<td>Per-seat / per-server commercial license and open source under GPL license.</td>
+<td>It is an open-source JavaScript framework under MIT license.</td>
+
+</tr>
+<tr>
+<td>28.</td>
+<td >Full documentation suite, tutorials, videos examples, trainings</td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+
+</tr>
+<tr>
+<td>29.</td>
+<td >Support: general discussion, reporting bugs and making feature requests</td>
+<td>Web-based public and premium (paid support subscribers only) support</td>
+<td><center>public support</center></td>
+
+</tr>
+<tr>
+<td>30.</td>
+<td>Complete fun and satisfaction: no management concern of integrating new releases and bug fixes from the selected 
+3rd-party libraries throughout the application&#39;s development lifecycle</td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center><span style="color:red"> &#10008;</span></center></td>
+
+</tr>
+
+<tr>
+ <td colspan=4 bgcolor="#ff5555" class="title">
+Others
+ </td>
+ </tr>
+ <tr>
+<td>31.</td>
+<td>Built in animation support</td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center> </td>
+
+</tr>
+<tr>
+<td>32.</td>
+<td ><a href="ExtJS-vs-AngularJS.html#qApi">Deferred and Promises</a></td>
+<td>DeftJS provides a number of extensions for ExtJS, including Deferred and Promises.</td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+</tr>
+ <tr>
+ <td>33.</td>
+<td><a href="ExtJS-vs-AngularJS.html#dirtyChecking">Dirty Checking</a></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+<td><center> <font style="color:blue">&#10004;</font></center></td>
+</tr>
+
+<tr>
+<td>34.</td>
+<td><a href="ExtJS-vs-AngularJS.html#deferBootstrap">Deferred Bootstrap</a></td>
+<td>Until now, ExtJS applications' testing has never required delay in the Bootstrap as third-party JavaScript testing 
+frameworks which are used for ExtJS application testing do not require deferring the bootstrap.</td>
+<td>Angular Scenario Runner and Batrang require Deferred Bootstrap and hence 
+Deferred Bootstrap concept is introduced to allow end to end tests.</td>
+</tr>
+
+
+
+
+
+</tbody>
+</table>
+</div>
+</td></tr>
+
+<tr>
+<td colspan=3><br/>
+<h3><a name="performance">Performance Comparison Stats</a></h3>
+To evaluate the performance aspect of these two frameworks, we developed a small application
+ with a simple grid, tree and a chart component. The prescribed build process for both these 
+ technologies were performed - so we can have minified builds for exact weight comparison.
+ YSlow was used to collect the performance metrics. Other details:
+<ul>
+<li>ExtJS: using grid, tree and chart components.</li>
+<li>AngularJS: using angular-charts.min.js, angular.min.js, jquery.min.js, 
+angular-route.min.js, ng-grid-2.0.7.min.js, angular.treeview.min.js, angular-animate.js 
+modules.</li>
+<li>The same http requests, for the data part of these components are used, going to the same web server. </li>
+<li>Conclusion: ExtJS is 3 times heavier than AngularJS.</li>
+</ul>
+
+ExtJS:<br/><br/>
+<img src="images/extBaseStat.png" width=700 ><br/>
+AngularJS:<br/><br/>
+<img src="images/angularStat.png" width=700 ><br/>
+If we use ext-all, then the stats are:<br/>
+<img src="images/extStat.png" width=700 ><br/>
+</td>
+</tr>
+<tr>
+<td colspan=3>
+<h3><a name="insights">When to use which framework:</a></h3>
+
+Use ExtJS if:
+<ul>
+<li>You want to use handy components delivered with Sencha Ext JS. It is a huge time saver.</li>
+<li>You do not want to worry regarding cross compatibility issues while Programming and Developement.
+ It is a big plus.</li>
+<li>You or your client need specialized licensing or an accountable party to call for support.</li>
+<li>If separate rich desktop applications (with Sencha ExtJS) and mobile web applications (with Sencha Touch)
+	is valuable.</li>
+<li>If paid support contracts and a per-seat / per-server commercial license is affordable.</li>
+</ul>
+
+Use AngularJS if:
+<ul>
+ <li>Smaller Footprint is required. For more details, see the 
+ <a href="ExtJS-vs-AngularJS.html#performance">Performance Comparison Stats</a>. </li>
+ <li>Responsive design is a requirement for your application.</li>
+ <li>Your organization find value in automated testing and automated testing is a part of your 
+ development culture.</li>
+ <li>It would be cheaper to integrate existing 3rd-party components which are free. </li>
+<li>Your team is comfortable with CSS and dealing with cross-browser compatibility issues.</li>
+<li>If the team will be able to manage integrating new releases and bug fixes from the selected 
+3rd-party libraries throughout the application's development lifecycle.</li>
+
+</ul>
+</td>
+
+
+
+</tr>
+</table>
+<table width=1000  align=center   class="detail">
+<tr>
+<td colspan=2>
+<h3><a name="architecture">Architectural Differences:</a></h3>
+</td>
+</tr>
+<tr>
+<td >
+<p>
+We have tried to classify architectural differences between ExtJS and AngularJS 
+along the following 10 dimensions. 
+<ol>
+<li><a href="ExtJS-vs-AngularJS.html#designFramework">Application Design Framework</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#components">Components</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#linking">Routing benefits</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#testing">Testability</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#data">Data Binding</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#seo">SEO Friendly</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#mobile">Mobile Solutions</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#domApproach">Dom Approach</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#qApi">Deferred and Promises</a></li>
+<li><a href="ExtJS-vs-AngularJS.html#dirtyChecking">Dirty checking  </a></li>
+<li><a href="ExtJS-vs-AngularJS.html#deferBootstrap">Deferred bootstrap</a></li>
+</ol>
+</p>
+</td>
+<td>
+<p align="justify"  style="background-color:lightgrey;padding:10px;">
+<b>Summary:</b><br/><br/>
+ExtJS is component based (Grid, Tree, Forms, Charts); the code begins with extending API classes and configuring models,
+customizing the presentation or behavior/events if needed, adding these components to containers/layouts. It follows object oriented principles and MVC pattern and direct interaction with DOM is rarely needed.
+<br/><br/>AngularJS, on the other hand, is declarative programming, we begin with adding AngularJS directives in plain HTML, configuring models, view configuration using templates and routes;
+and the framework takes care of final DOM creation.
+Since we are dealing with HTML, there is a direct interaction with HTML structure or DOM elements.</p>
+
+</td>
+
+</tr>
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="designFramework">Application Design Framework:</a></h4>
+</td>
+</tr>
+<tr  >
+<td class="senchaColor">
+Ext JS:
+<ul>
+<li>It supports both MVC and MVVM frameworks.</li>
+<li>As ExtJS application size and complexity increases, Sencha Touch and Ext JS can be augmented with 
+Deft JS to add an Inversion of Control (IoC) container, for dependency injection and dynamic 
+application assembly.</li>
+<li>It is component-based and hence modular.</li>
+</ul>
+</td>
+<td class="angularColor"  >
+AngularJS:
+<ul><li>AngularJS is HTML enhanced for web apps.</li>
+<li> It is described as a &#39;Model-View-Whatever&#39; framework in which it does not prescribe a specific 
+ application architecture or set of patterns. However it is sufficiently flexible to support popular 
+ patterns such as Model-View-Controller or Model-View-ViewModel.</li>
+ <li>It is module based. It autowires the dependency modules within the html elements.</li>
+ </ul>
+
+</td>
+</tr>
+<tr>
+<td colspan=2 class="detailTitle">
+<h4><a name="components">Components:</a></h4>
+</td>
+</tr>
+<tr>
+<td class="senchaColor">
+Ext JS:<br/><br/>
+One of the primary attributes that distinguishes ExtJS from other JavaScript
+ frameworks is the inclusion of a rich suite of theme-able UI components.<br/>
+  <b>Pros:</b><br/>The handy components delivered with Ext JS are a huge time saver.<br/>
+ <b>Cons:</b><br/>Sencha components tend to produce verbose DOM output, resulting in many more tags that 
+ might otherwise be required.
+ 
+ </td>
+ <td class="angularColor">
+ AngularJS: <br/> 
+<ul><li>What AngularJS does not address is a rich library of user interface components.</li>
+<li> However, there are a number of open source and commercial components which provide integration
+ for AngularJS including AngularUI, AngularUI Bootstrap, Kendo (and Angular-Kendo), Wijmo and others.</li></ul>
+
+</tr>
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="linking">Routing benefits:</a></h4>
+</td>
+</tr>
+<tr>
+<td class="senchaColor">
+ExtJS:<br/><br/>
+ExtJS 5 has introduced the support for the router.
+<ul>
+<li>ExtJS 5 router can be used to track the application state through the use of the browser history stack.</li>
+<li>It allows for deep linking into the application which allows a direct link to a specific part of your application.</li>
+<li>It supports browser's bookmarks and browser's back / forward navigation. </li>
+</ul></td>
+<td class="angularColor" >
+AngularJS:<br/>
+<ul><li>AngularJS router wires together controllers, view templates, and the current URL 
+location in the browser. Using this feature we 
+can implement deep linking.</li>
+<li>Deep linking consists of using a hyperlink that links to a specific,
+generally searchable or indexed piece of web content on a website. It lets us utilize the 
+browser's history (back and forward navigation) and browser's 
+bookmarks feature.</li>
+</ul></td>
+
+</tr>
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="testing">Testability:</a></h4>
+</td>
+</tr>
+<tr>
+<td class="senchaColor">
+ExtJS:<br/>
+<ul><li>Applications built with Sencha&#39;s framework can be tested 
+using several popular third-party JavaScript testing frameworks such as Siesta (optimized specifically
+ for Ext JS), Jasmine and Mocha.</li>
+<li>The Sencha product suite does not include a testing framework or test runner.</li>
+
+</ul></td>
+<td class="angularColor" >AngularJS:
+<ul><li>AngularJS was designed from the ground up to create testable applications.
+</li><li> It supports all three facets of automated testing: unit, integration and functional testing.</li>
+<li> The AngularJS team has also developed its own Karma test runner. In addition, 3rd party tool 
+Protractor is the end to end test framework for Angular apps.</li>
+
+ </ul></td>
+
+</tr>
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="data">Two way data binding:</a></h4>
+Two way data binding is a glue between the application UI (User Interface)
+ and model objects, so that changes to an object's properties reflect in the UI and vice-versa.
+</td>
+</tr>
+<tr>
+
+ <td class="senchaColor" >ExtJS:<br/>
+<ul><li>ExtJS 5 components have a new bind config param that allows for two-way data binding,
+which means live synchronization of data between the view and the model. </li>
+<li>In previous versions of ExtJS, it executes the data binding feature using its Store object but a little work needed to be done such as reloading the store etc. </li>
+</ul>
+</td> <td class="angularColor">AngularJS:<br/><br/>
+Two way data binding in AngularJS is executed with the scope which is basically a model nested in a prototypal inheritance 
+ tree of scopes (models).<br/><br/>
+ <b>Cons:</b><br/>
+Application becomes laggy if there are 2000-3000 bindings in a template. <br/><br/>Bindonce is a great way to minimize the number of watches when most of the data presented in 
+your page, once rendered, are immutable and you need not keep watching them for changes.
+  </td>
+
+
+</tr>
+<tr>
+<td colspan=3 class="detailTitle" >
+<h4><a name="seo">SEO Friendliness:</a></h4>
+
+Most of the single page apps which work behind authentication need not be indexed for SEO. 
+If you have some pages in your app which are public and which needs to be indexed, you can create
+them separately, either with static HTML/CSS or if you do need to use dynamic content, consider Ajax
+based SEO as described below. <br/><br/>
+<b>Ajax based SEO:</b> For the indexing of dynamic / ajax-based single page web apps, all you have to do is to
+ generate the additional static content so that when the crawlers access your page,
+ they get easy access to that static content and when the users access your page, they see the app. 
+To achieve this functionality you could either use some tools like Prerender.io: fully open-source 
+ or you have to set up the headless browser support in your web-server 
+which is an additional effort.
+</td>
+</tr>
+<tr>
+ <td class="senchaColor">  ExtJS:<br/><br/>
+   Ajax based seo is possible in ExtJS with hashbang urls' support in your web-server.</div>
+</td>
+<td class="angularColor">AngularJS:<br/><br/>
+  <ul><li>AngularJS seo with Prerender.io: When a crawler visits your page at hashbang url,
+   the Prerender service will check and see if it has a snapshot or already rendered page 
+   for that URL, if yes, it will send it to the crawler, if not, it will render 
+   a snapshot on the fly and send the rendered HTML to the crawler for correct indexing.</li>
+  <li>Alternatively, you can also build support for hashbang URLs
+	which may require you to set-up your web-server to summon-up the 
+   headless html browser.</li></ul> </td>
+</tr>
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="mobile">Mobile Solutions:</a></h4>
+</td>
+</tr>
+<tr>
+<td  class="senchaColor" >ExtJS:<br/><br/>
+ <ul><li>Sencha Touch - the industry-leading and high-performance mobile HTML5 framework, 
+ is used to develop powerful, universal mobile web apps / mobile website.</li>
+<li>Sencha touch integration with Cordova/Phonegap  is used to develop the cross platform hybrid applications.</li></ul></td>
+<td class="angularColor" >AngularJS:<br/><br/>
+<ul><li>AngularJS can be used to develop responsive web apps / websites
+ although all the angular modules are not responsive.</li> 
+<li>To develop the cross platform hybrid applications, integrate AngularJS with 
+<ul><li>Trigger.io</li>
+<li>  Ionic Framework - Advanced Html5 hybrid mobile framework and optimized for 
+AngularJS</li> 
+<li> Cordova/Phonegap</li></ul>
+</li>
+</ul>
+</tr>
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="domApproach">Dom Approach:</a></h4>
+</td>
+</tr>
+<tr>
+<td  class="senchaColor" >ExtJS:<br/><br/>
+It follows the Depth First, Bottom-Up approach.
+</td>
+<td class="angularColor">AngularJS:<br/><br/>
+Directives are linked in a Depth-First, Bottom-Up approach to the DOM tree.
+Controllers are linked in a top-down manner.
+</td>
+</tr>
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="qApi">Deferred and Promises:</a></h4>
+Deferred and Promises break the complexities of asynchronous programming,
+ separate out the synchronous and asynchronous world, remove the tight coupling between the two
+They are for asynchronous programming what try, catch and throw keywords are for synchronous programming.
+</td>
+</tr>
+<tr>
+<td  class="senchaColor">ExtJS:<br/><br/>
+ExtJS augmented with DeftJS may provide Deferred and Promises.</td>
+<td class="angularColor">AngularJS:<br/><br/>
+AngularJS offers an implementation of the Q API for Deferred and Promises.
+ 
+ </td>
+</tr>
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="dirtyChecking">Dirty Checking</a></h4>
+Dirty checking in nutshell: The framework compares the old value and new value and if they are 
+different, fires the change event.<br/>
+</td>
+</tr>
+<tr>
+<td  class="senchaColor">ExtJS:<br/><br/>
+<ul><li>ExtJS 4.x uses the store's binding feature to execute the dirty checking.</li>
+<li>ExtJS store allows you to delay the process of dirty checking via its autoSync 
+config which when set to false, the user changes are marked with dirty flags in UI and are 
+updated in batch when the user saves the store.  </li>
+ <li>To reflect the changes in the real data in UI, a little work is to be done like reloading the store etc</li></ul>
+</td>
+<td class="angularColor">AngularJS:<br/><br/>
+<ul><li>Angular uses the <a href="ExtJS-vs-AngularJS.html#digestCycle">Digest Cycle</a> to execute the dirty checking.</li>
+<li> With Angular api, you do not need to manaually call the digest cycle, 
+angular internally fires digest cycle followed by updation of the dom but 
+ from third party api, you need to call $apply method to enter the digest cycle.</li>
+ <li>Changes are reflected in the real data in UI as soon as the digest cycle is finished.</li>
+ <li>The dirty checking is done asynchronously.</li>
+
+</ul> 
+<b>Cons:</b><br/>
+<ul>
+<li>Application becomes laggy if there are 2000-3000 watches in a template... <a href="ExtJS-vs-AngularJS.html#cons">more</a></li>
+
+</ul>
+Bindonce is a great way to minimize the number of watches when most of the data presented in 
+your page, once rendered, are immutable and you need not keep watching them for changes.
+  </td></tr>
+
+
+
+<tr >
+<td colspan=2 class="detailTitle">
+<h4><a name="deferBootstrap" >Deferred bootstrap:</a></h4>
+
+Bootstrap means the initialization process. Deferred bootstrap is to make a delay in the bootstrap process to 
+mock out the heavy dependencies or for the instrumentation purposes. Deferred bootstrap is primarily 
+introduced to allow end to end tests. <br/><br/>
+Although deferred bootstrap has no value in the developement and testing of most single page applications, yet it serves 
+its value in AngularJS applications' end to end testing. Some javascript test runners such as Batrang 
+and  Angular Scenario Runner (which are developed by AngularJS team for the end to end testing 
+of the angularJS applications) require deferred bootstrap.
+</td>
+</tr>
+<tr>
+<td  class="senchaColor">ExtJS:<br/><br/>
+Several popular third-party JavaScript testing frameworks such as Siesta (optimized specifically
+ for Ext JS), Jasmine and Mocha, are being used for ExtJS applications testing 
+ which do not require deferring the ExtJS application's bootstrap.
+</td>
+<td class="angularColor">AngularJS:<br/><br/>
+<ul>
+<li>
+Batrang is a new Chrome extension, recommended by the angular team, provides the tools to address 
+performance bottlenecks, visualize and debug applications.</li>
+<li>AngularJS Batarang and Angular Scenario Runner require Deferred Bootstrap 
+feature to hook into
+ angular's bootstrap process and sneak in more modules into the DI registry which 
+ can replace or augment DI services for the purpose of instrumentation or mocking out 
+ heavy dependencies.</li>
+
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td colspan=2>
+<br/><br/>
+<a name="digestCycle"><b>Digest Cycle in AngularJS:</b></a><br/>
+<ul><li>The digest cycle is all about reacting to changes in data.</li>
+<li>Generally what happens is, the browser's event-loop waits for an event to arrive, 
+as long as it recives an event, 
+it emits the event on the input controls which is then captured in the 
+corresponding directive's event handler which calls apply function, to enter 
+into Angular execution context, with function/expression 
+(the work you wish to do in Angular execution context) as parameter.</li>
+<li><b>Model mutation</b> is then executed in apply function with all 
+the error handling followed by the firing of the digest cycle in its finally phase. </li>
+<li>In all the  Dirty Cycle mechanisms, 
+ all the <a href="ExtJS-vs-AngularJS.html#watcher">watchers</a> in the watch list are iterated and in each iteration watch expression in 
+current scope is evaluated, old and new value of scope is compared and if both values differ,
+then the corresponding listener of the watcher function is fired which upon execution 
+calls digest cycle again with one of the two possilities:
+<ul><li> If the listener function does not modify the scope then in the running digest turn, model is declared as stable and 
+digest loop is finished followed by the browser re-painting of the DOM node which was dirty.</li> 
+<li>If scope is modified, then it will fire the other listeners, so the watchers 
+keep re-running until until no more watchers are fired and a 
+max limit of 10 iterations is reached when $digest will throw
+ 'Maximum iteration limit exceeded' to prevent infinite loops. </li></ul></li>
+ <li>This dirty checking is done <a href="ExtJS-vs-AngularJS.html#asynchronousNature">asynchronously</a>. </li>
+ </ul>
+ 
+ <b>Three mechanisms of Dirty Checking:</b><br/>
+<ul>
+<li>
+<b>Reference-Based Dirty-Checking:</b> The old value is compared to the new with the strict equality operator
+===  which detect the new and old values are the same "physical" object.
+It is the most efficient both in terms of computation and memory, 
+since it doesn't do copying or traversal. 
+It merely keeps a reference to the value around for comparison. </li>
+<li><b>Value-Based Dirty-Checking:</b> It performs a deep-object-tree comparison.This means that within each $digest cycle,
+ AngularJS will check to see if the new and old values have the same structure. </li>
+<li><b>Collection-based dirty checking:</b> It works by comparing physical object references. Collection watchers keep an internal copy of the
+ array or object, and traverse the old and new values in each digest cycle, checking for 
+ changes using the strict equality operator === i.e. unlike the reference based dirty checking, it  goes one-level deep and 
+  performs an additional, shallow reference check of the top level items in the collection.</li>
+  </ul>
+   
+  <a name="cons"><b>Cons of dirty checking:</b></a>
+ <br/>Application becomes laggy if there are 2000-3000 watches in a template.<br/>
+  
+Although anything faster than 50ms is imperceptible to humans and you can't really show more 
+than about 2000 pieces of information to a human on a single page because anything more than that
+ is really a bad UI and humans can't process this anyway, yet while building any sort of widget or 
+ data grid with two-way binding you may easily hit 2000 bindings without the bad UI.
+<br/><br/>
+<a name="watcher"><b>Watcher:</b></a><br/><br/>
+By default all the model data that is bound to UI are being watched upon i.e. 
+ they all have a watcher registered in the watch list, a collection used by digest cycle for the dirty checking.
+ You can also attach a watcher to the scope by using $watch function.
+  A watcher has two functions:
+  A watch function or a watch expression, which specifies the piece of data you are interested in.
+ A listener function which will be called whenever that data changes.
+<br/><br/>
+  <a name="asynchronousNature"><b>Asynchronous nature of dirty cycle:</b></a><br/><br/>
+  Assignment such as $scope.username="angular" will not immediately 
+  cause a $watch to be notified, instead the $watch notification is delayed 
+  until the $digest phase. This delay is desirable, since it coalesces multiple 
+  model updates into one $watch notification as well as it guarantees that 
+  during the $watch notification no other $watches are running. 
+  If a $watch changes the value of the model, it will force additional $digest cycle.<br/><br/>
+ 
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<br/>
+			<font color="#bf0000">To get latest updates, you can follow TechFerry: 
+	
+			<ul>
+			<li style="margin: 0 0 5px 0">	
+					<script type="IN/FollowCompany" data-id="2421742" data-counter="right"></script>
+			</li>
+			<li><a target=_blank href="https://twitter.com/techferry" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @techferry on Twitter</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</li><li>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=134763283351412";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
+		
+		<div class="fb-like" data-href="https://www.facebook.com/pages/TechFerry/278340385550543" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+	</li>
+
+			</ul>
+			
+			<a name="next"></a>
+			<br/>
+			 <div style="width:99%;border:1px solid black;text-align:left">
+				<div style="background-color:#1465de;color:white;padding:5px;">Next Steps: Download our FREE eBook</div>
+
+                <div style="display:inline-block;padding:12px;">
+                <img width="130px" src="../eBooks/images/UsabilityBook.PNG" alt="Usability eBook" style="border:black 1px solid"/>
+                </div>
+                <div style="display:inline-block;padding:5px;width:80%">
+                
+				<a target="_blank" style="text-decoration:none;cursor:pointer" href="http://www.techferry.com/eBooks/Usability-Beyond-RIA.html">
+				<span style="color:#bf0000;font-size:17px;"><u>Usability - Beyond RIA</u></span> <br/>
+				<span class="fontCls" style="color:#1465de;">http://www.techferry.com/eBooks/Usability-Beyond-RIA.html</span> <br/>
+				</a><br/>
+				<span class="fontCls" style="color:black;">  
+					Usability, though a frequently used term but is the least understood in the industry. This report highlights how a magnificently designed product/solution can still make users struggle to achieve even the simple desired objectives.
+					<br/><br/>
+					This report is NOT an academic study, rather it share experiences on Usability with examples and implementations from software industry. It talks about gaps between user expectations and their actual interactions with products.
+				</span>
+                </div>
+            </div>
+            <br/><br/>
+</td>
+</tr>
+</table>
+  
+<div id="footer"></div>
+</td></tr></table>
+</center>
+<div id='pageshare' title="Share This With Your Friends">
+	<div class='sbutton' id='gb'><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like layout="box_count" show_faces="false" font=""></fb:like></div>
+	<div class='sbutton' id='gplusone'><script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><g:plusone size="tall"></g:plusone></div>
+	<div class='sbutton' id='su'><script src="http://www.stumbleupon.com/hostedbadge.php?s=5"></script></div>
+	<div class='sbutton' id='rt'><a href="http://twitter.com/share" class="twitter-share-button"  data-count="vertical" >Tweet</a><script src='http://platform.twitter.com/widgets.js' type="text/javascript"></script></div>
+	<div class='floatbutton' id='linkedin'><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+	<script type="IN/Share" data-counter="top"></script></div>
+</div>
+</body>  
+</html>

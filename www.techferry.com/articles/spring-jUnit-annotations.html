@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring - jUnit Annotations</title>
+    <script src="../js/jquery-1.5.1.min.js"></script>
+    <script src="../js/jquery.validationEngine-en.js" type="text/javascript"></script>
+	<script src="../js/jquery.validationEngine.js" type="text/javascript"></script>
+    <script src="../js/shCore.js"></script>
+    <script src="../js/shBrushJava.js"></script>
+    <link rel="StyleSheet" href="../css/redmond/jquery-ui-1.8.14.custom.css" type="text/css" /> 
+    <link href="../css/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="../css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<link href="../css/article.css" rel="stylesheet" type="text/css" />
+	<link href="../css/validation.css" rel="stylesheet" type="text/css" />
+	<link rel="Shortcut Icon" href="../images/favicon.ico" type="image/x-icon" />
+
+<meta name="keywords" content="jUnit Annotations Tutorial, jUnit annotation - code examples"  />
+<meta name="keyphrases" content="jUnit Annotations Tutorial, jUnit annotation - code examples"  />
+<meta name="description" content="Spring jUnit Annotations: This tutorial is part 5 of 5-part tutorial on JEE annotations. 
+It contains usage instructions, code examples and tips on Spring - jUnit annotations for testing spring applications."  />
+	
+	<script>
+	    $(document).ready(function(){
+	    	var hc = $($.ajax({url: "header.html", async: false}).responseText);
+	    	$('#header').html(hc);
+            var fc = $($.ajax({url: "footer.html", async: false}).responseText);
+            $('#footer').html(fc);
+	    });
+    </script>
+    <script type="text/javascript">
+     	SyntaxHighlighter.all();
+	</script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27684656-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<center>
+<table width="1000px"><tr><td>
+<div id="header"></div>
+<div class="topbar">
+<a href="http://www.techferry.com/" title="TechFerry: Your ferry to success">Home</a> 
+&gt; <a href="index.html" title="TechFerry Articles">Articles</a>
+&gt; <a href="spring-jUnit-annotations.html" title="Spring - jUnit Annotations">Spring - jUnit Annotations</a>
+</div>
+
+<table align="right" width="290px">
+<tr><td>
+<a href="massively-scalable-applications.html" target="_blank" title="Massively Scalable Applications"><img alt="Massively Scalable Applications"  title="Massively Scalable Applications"  style="margin: 27px 0 0 20px;" src="images/Massively-Scalable-Application.png"></img></a>
+
+<!--
+		
+		<div style="background-color:#e0e0e0; height:527px;margin: 27px 0 0 20px;border:1px solid #e0e0e0">
+                  <p style='margin:24px 0 0 0'>
+                   <center>
+                      <a title="NodeJS vs J2EE Stack A Performance Comparison Study"
+                       href="http://www.techferry.com/eBooks/NodeJS-vs-J2EE-Stack.html" target="_blank"> 
+                       <strong>
+                       <span style="font-size:27px; color: #bf0000;">NodeJS vs J2EE Stack<br></span>
+                       </strong> <br/>
+                       <span style="color:blue;display:inline-block">A Performance Comparison Study</span><br /> 
+                       </a>
+                    <br/> 
+                  <a href="http://www.techferry.com/eBooks/NodeJS-vs-J2EE-Stack.html" target="_blank"> 
+                     <img src="../eBooks/images/NodeBook.png" alt="" title="NodeJS vs J2EE Stack A Performance Comparison Study" height="240"/></a>
+                    </center>
+                   </p> 
+                   
+                 <p style='margin:24px 0 0 0'>
+<a title="NodeJS vs J2EE Stack A Performance Comparison Study"
+                       href="http://www.techferry.com/eBooks/NodeJS-vs-J2EE-Stack.html" target="_blank"> 
+                      <strong> <span style="color:#bf0000;display:inline-block">
+            		<em> &nbsp; >>  Download 
+            		<span style="color:#000000;display:inline-block">your FREE Copy&#8230;</span>
+            		</em>
+                	</span></strong>
+                	</a> 
+                  </p>
+                  
+                  <p style="background-color:lightgrey;padding:3px 0 3px 0;">
+									<strong><font color="#bf0000" size="3"> &nbsp; More eBooks:</font></strong>
+					</p>
+								<ul  style="line-height: 1.5;">
+									<li><font size="3">
+										<a style="color:blue" href="http://www.techferry.com/eBooks/Usability-Beyond-RIA.html" target="_blank">Usability - Beyond RIA</a></font></li>
+								</ul>
+      </div> -->
+</td></tr>
+</table>
+
+<h2>Part 5: Spring - jUnit Annotations</h2>
+<p align="justify">
+This tutorial is part 5 of 5-part tutorial on JEE annotations. 
+We recommend that you read <a href="JEE-annotations.html#Prerequisite">Prerequisite</a> section first, 
+review the <a href="JEE-annotations.html#abstract">abstract</a> and 
+<a href="JEE-annotations.html#exampleApp">Example Application</a> to understand the context. 
+You can also jump to other parts by clicking on the links below.
+</p>
+
+    <div class="ui-widget">
+    <table class="ui-widget ui-widget-content" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr class="ui-widget-header ">
+                <th>Annotation Tutorial: Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td>
+        <a href="JEE-annotations.html" title="JEE Annotations"> JEE Annotations </a> &nbsp;
+        <font size="-2">( 
+                <a href="JEE-annotations.html#abstract"> Abstract </a> &nbsp;
+                <a href="JEE-annotations.html#exampleApp"> Example Application </a> &nbsp;
+                <a href="JEE-annotations.html#references"> References </a> )
+        </font>
+        <ul style="margin-top:7;margin-bottom:7">
+        	<li><a href="spring-annotations.html" title="Spring Annotations">Part 1: Spring Annotations </a></li>
+        	<li><a href="hibernate-jpa-annotations.html" title="Hibernate - JPA Annotations">Part 2: Hibernate - JPA Annotations </a></li>
+        	<li><a href="RESTful-web-services-JAX-RS-annotations.html" title="RESTful Web Service - JAX-RS Annotations">Part 3: RESTful Web Service - JAX-RS Annotations </a></li>
+        	<li><a href="jaxb-annotations.html" title="JAXB Annotations">Part 4: JAXB Annotations </a></li>
+        	<li><a href="spring-jUnit-annotations.html" title="Spring - jUnit Annotations">Part 5: Spring - jUnit Annotations </a></li>
+        </ul>     
+        </ul>     
+        </td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Spring jUnit Annotations - Contents:</h2>
+<table border="1" style="background-color:#e0e0e0" cellpadding="3">
+<tr><th>Annotation</th><th>Package Detail/Import statement </th></tr>
+<tr><td><a href="spring-jUnit-annotations.html#RunWith" title="jUnit Annotation @RunWith">@RunWith</a></td><td>import org.junit.runner.RunWith;</td></tr>
+<tr><td><a href="spring-jUnit-annotations.html#ContextConfiguration">@ContextConfiguration</a></td><td>import org.springframework.test.context.ContextConfiguration;</td></tr>
+<tr><td><a href="spring-jUnit-annotations.html#Test" title="jUnit Annotation @Test">@Test</a></td><td>import org.junit.Test;</td></tr>
+<tr><td><a href="spring-jUnit-annotations.html#DirtiesContext">@DirtiesContext</a></td><td>import org.springframework.test.annotation.DirtiesContext;</td></tr>
+<tr><td><a href="spring-jUnit-annotations.html#Timed">@Timed</a></td><td>import org.springframework.test.annotation.Timed;</td></tr>
+</table>
+
+<br/>
+
+We are now ready to test our Spring based application using jUnit and Spring Unit testing framework. 
+The following jUnit and Spring annotations will be used to accomplish this.
+
+<a name="RunWith"></a>
+<h3 title="jUnit Annotation @RunWith">@RunWith</h3>
+When a class is annotated with @RunWith or extends a class annotated with @RunWith, 
+JUnit will invoke the class it references to run the tests in that class instead of the runner built into JUnit.
+Let us configure jUnit to use Spring jUnit Class runner.
+
+<pre class="brush: java;toolbar: false;">
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "/spring-servlet-test.xml" })
+public class CompanyServiceTest {
+...
+}
+</pre>
+
+<a name="ContextConfiguration"></a>
+<h3>@ContextConfiguration</h3>
+Set the spring ApplicationContext for your test classes using @ContextConfiguration annotation.
+<pre class="brush: java;toolbar: false;">
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "/spring-servlet-test.xml" })
+public class CompanyServiceTest {
+...
+}
+</pre>
+
+<table class="tips"><tr><td>
+<img src="images/tips.gif" title="jUnit Annotation Tip" /> </td><td>
+@ContextConfiguration provides support for inheriting resource locations or configuration classes declared by superclasses by default.
+</td></tr></table>
+
+<a name="Test"></a>
+<h3 title="jUnit Annotation @Test">@Test</h3>
+
+Annotate all your jUnit unit tests with @Test.
+Also note that we can wire other spring beans in our jUnit test classes using @Autowired annotation.
+
+<pre class="brush: java;toolbar: false;">
+  @Autowired
+  private CompanyService companyService;
+
+  @Test
+  public void testFindByName() {
+    Company company = companyService.findByName("techferry");
+    if (company != null) {
+      assertEquals("prospect", company.getStatus().getName());
+    }
+  }
+</pre>
+
+<a name="DirtiesContext"></a>
+<h3>@DirtiesContext</h3>
+Annotate @DirtiesContext to indicate that it dirties the ApplicationContext. This will trigger context reloading before execution of next test.
+
+<a name="Timed"></a>
+<h3>@Timed</h3>
+
+Indicates that the annotated test method must finish execution in a specified time period (in milliseconds). 
+If the text execution time exceeds the specified time period, the test fails.
+<pre class="brush: java;toolbar: false;">
+@Timed(millis=1000)
+</pre>
+
+<h2>References</h2>
+
+<ol>
+<li><a target="_blank" href="http://static.springsource.org/spring/docs/current/spring-framework-reference/html/testing.html#integration-testing-annotations">Annotations for Unit Testing Spring applications</a>: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/testing.html#integration-testing-annotations </li>
+</ol><br/>
+<table width="85%" align="center"><tr>
+<td width="33%" align="center"> <a href="JEE-annotations.html" title="JEE Annotations" style="text-decoration:none"><input type="button" value="JEE Annotations" style="width:250px" onclick="window.location.href='JEE-annotations.html'"/></a></td>
+<td width="33%" align="center"><a href="spring-annotations.html" title="Spring Annotations" style="text-decoration:none"><input type="button" value="Spring Annotations" style="width:250px" onclick="window.location.href='spring-annotations.html'"/></a></td>
+<td width="33%" align="center"><a href="hibernate-jpa-annotations.html" title="Hibernate Annotations" style="text-decoration:none"><input type="button" value="Hibernate JPA Annotations" style="width:250px" onclick="window.location.href='hibernate-jpa-annotations.html'"/></a></td>
+</tr><tr>
+<td width="33%" align="center"><a href="RESTful-web-services-JAX-RS-annotations.html" title="Jersey Annotations" style="text-decoration:none"><input type="button" value="REST - JAXRS Annotations" style="width:250px" onclick="window.location.href='RESTful-web-services-JAX-RS-annotations.html'"/></a></td>
+<td width="33%" align="center"><a href="jaxb-annotations.html" title="JAXB Annotations" style="text-decoration:none"><input type="button" value="JAXB Annotations" style="width:250px" onclick="window.location.href='jaxb-annotations.html'"/></a></td>
+<td width="33%" align="center"><a href="spring-jUnit-annotations.html" title="Spring jUnit Annotations" style="text-decoration:none"><input type="button" value="Spring jUnit Annotations" style="width:250px" onclick="window.location.href='spring-jUnit-annotations.html'"/></a></td>
+</tr>
+</table><br/>
+<div id="footer"></div>
+</td></tr></table>
+</center>
+<div id='pageshare' title="Share This With Your Friends">
+	<div class='sbutton' id='gb'><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like layout="box_count" show_faces="false" font=""></fb:like></div>
+	<div class='sbutton' id='gplusone'><script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><g:plusone size="tall"></g:plusone></div>
+	<div class='sbutton' id='su'><script src="http://www.stumbleupon.com/hostedbadge.php?s=5"></script></div>
+	<div class='sbutton' id='rt'><a href="http://twitter.com/share" class="twitter-share-button"  data-count="vertical" >Tweet</a><script src='http://platform.twitter.com/widgets.js' type="text/javascript"></script></div>
+	<div class='floatbutton' id='linkedin'><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+	<script type="IN/Share" data-counter="top"></script></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,3371 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Swarm Intelligence</title>
+
+<link rel="stylesheet" href="si/js/bootstrap/css/bootstrap.min.css" />
+ <link rel="Shortcut Icon" href="../images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet"
+	href="http://www.techferry.com/articles/si/js/bootstrap/css/bootstrap-responsive.min.css" />
+
+<!-- Includes FontAwesome -->
+<link rel="stylesheet"
+	href="si/css/font-awesome/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="si/css/stylesheet.css" />
+
+<meta name="keywords" content="Swarm Intelligence"  />
+<meta name="keyphrases" content="Swarm Intelligence"  />
+<meta name="description" content="Swarm Intelligence - A comprehensive review of Swarm intelligence concepts, technologies, frameworks and use-cases."  />
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27684656-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div id="main">
+		<div id="introduction">
+				<div id="header">
+					<a href="http://www.techferry.com/"> <img
+						src="../images/logo.png" alt="TechFerry Logo"
+						style="border: 0">
+					</a>
+				</div>
+	
+				<h2 style="color: red;">Swarm Intelligence</h2>
+	
+	
+				Swarm intelligence is an emerging field of biologically-inspired
+				artificial intelligence based on the behavioral models of social
+				insects such as ants, bees, wasps, termites etc. TechFerry has
+				published this article to nail down what research has been done on
+				Swarm Intelligence. This article covers Swarm Intelligence Basic
+				Overview, Swarm Aspects, Swarm Machinary, Swarm Technologies, Swarm
+				Languages, Swarm Frameworks, Swarm Tools, Swarm Use Cases.<br /> <br />
+				A Swarm is a configuration of tens of thousands of individuals
+				that have chosen their own will to converge on a common goal. Swarm
+				Intelligence is the Complex Collective, Self-Organized, Coordinated,
+				Flexible and Robust Behaviour of a group following the simple rules.<br />
+				<br />
+				<ul>
+					<li><a href="swarm-intelligence.html#overview"> Swarm Intelligence Overview</a></li>
+					<li><a href="swarm-intelligence.html#aspects">Swarm Intelligence Aspects</a></li>
+					<li><a href="swarm-intelligence.html#machinery">Swarm Machinery / Swarm
+							Intelligence Mechanisms</a></li>
+					<li><a href="swarm-intelligence.html#technologies">Swarm Technologies</a></li>
+					<li><a href="swarm-intelligence.html#languages">Swarm Languages</a></li>
+					<li><a href="swarm-intelligence.html#frameworks">Swarm Frameworks</a></li>
+					<li><a href="swarm-intelligence.html#tools">Swarm Tools</a></li>
+					<li><a href="swarm-intelligence.html#useCases">Use Cases</a></li>
+				</ul>
+			</div>
+			
+			<div id="items" class="row-fluid">
+				<div class="item masonry-brick" id="heading">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table align=center>
+									<tr>
+										<td><h3>
+												<a name="overview">Swarm Intelligence Overview</a>
+											</h3></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Swarm Intelligence:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) One Million Heads, One Beautiful Mind</td>
+									</tr>
+									<tr>
+										<td>2) Agents interacting locally with each other and the
+											environment </td>
+									</tr>
+									<tr>
+										<td>3) Agents follow simple rules</td>
+									</tr>
+									<tr>
+										<td>4) Emergence of Itelligent, Collective,
+											Self-organised, Global behaviour</td>
+									</tr>
+									<tr>
+										<td>5) Decentralized and artificial or natural</td>
+									</tr>
+									<tr>
+										<td>6) Very adaptive</td>
+									</tr>
+									<tr>
+										<td>7) Randomness enables the continuous exploration of the
+											alternatives and it ensures that the better solution will be found.
+										</td>
+									</tr>
+									<tr>
+										<td>8) Behavior relies on stochastic choices made by the agents
+											which are a balance between
+											a simple perception-reaction model and a random model.</td>
+									</tr>
+									<tr>
+										<td>9) Application of bio-inspired concepts</td>
+									</tr>
+									<tr>
+										<td>10) Large mass of the agents is a must. </td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/Capabilities.png"
+							target="_blank"> <img alt="" src="si/img/Capabilities.png"
+							height="200">
+						</a>
+
+
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Swarm Intelligence Capabilities:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) <b><a
+												href="http://homes.ieu.edu.tr/~agokce/Courses/Swarm%20Intelligence%20Intro.pdf">Scheduling
+													/ Load Balancing: </a></b> The emphasis is on the relative
+											position of the job rather than its direct predecessor or its
+											direct successor in the schedule and summation evaluation
+											rule / global pheromone evaluation rule is followed.<br /><br /> <a
+											href="http://ecommons.usask.ca/bitstream/handle/10388/etd-04132009-123250/thesis.pdf">
+												<img src="si/img/AntZ.png">
+										</a><br /> Fig: Ant Colony Load Balancing - <a
+											href="http://ecommons.usask.ca/bitstream/handle/10388/etd-04132009-123250/thesis.pdf">AntZ</a><br/>
+											<br/>
+										</td>
+									</tr>
+									<tr>
+										<td>2) <b>Clustering: </b> A cluster is a
+											collection of agents which are similar and are
+											dissimilar to the agents in other clusters.<br /><br />
+											<a
+											href="http://bio.felk.cvut.cz/biocmsms/index.php?page=swarm-intelligence">
+												<img src="si/img/antclustering.png">
+										</a><br /> Fig: Formation of 
+												cluster of corpses to clean up the ants' nests <br /><br />
+										</td>
+									</tr>
+									<tr>
+										<td>3) <b>Optimization:</b> An optimization problem is
+											the problem of finding the Best Solution / Minimal Cost
+											Solution from all the feasible solutions.<br /><br /> <a
+											href="http://vinodwadhawan.blogspot.in/2013/07/87-artificial-distributed-intelligence.html">
+												<img src="si/img/OpticalNetworkOptimization.jpg">
+										</a><br /> Fig:
+												optical network optimization - A practical application of
+											particle swarm intelligence<br /><br />
+										</td>
+									</tr>
+									<tr>
+										<td>4)<b> Routing: </b> This is based on the principle that
+											backward ants utilize the useful information gathered by the
+											forward ants on their trip from source to destination. <br /><br />
+											<a
+											href="http://www.idsia.ch/~gianni/AntHocNet/anthocnet.html">
+												<img src="si/img/AntHocNet.png">
+										</a><br /> Fig: <a
+											href="http://www.idsia.ch/~gianni/AntHocNet/anthocnet.html">The
+												AntHocNet</a> routing algorithm for MANETs (mobile ad hoc
+											networks)
+										</td>
+									</tr>
+
+								</table>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/benefits.png"
+							target="_blank"> <img alt="" src="si/img/benefits.png"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Advantages:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) <b>Flexible:</b> The colony respond to internal
+											disturbances and external challenges.
+										</td>
+									</tr>
+									<tr>
+										<td>2) <b>Robust: </b>Tasks are completed even if some
+											agents fail.
+										</td>
+									</tr>
+									<tr>
+										<td>3) <b>Scalable: </b>From a few agents to
+											millions
+										</td>
+									</tr>
+									<tr>
+										<td>4) <b>Decentralized: </b>There is no central control
+											in the colony.
+										</td>
+									</tr>
+									<tr>
+										<td>5) <b>Self-organized: </b>The solutions are emergent
+											rather than pre-defined.
+										</td>
+									</tr>
+									<tr>
+										<td>6) <b>Adaptation: </b>The swarm system can not only adjust to predetermined stimuli but also to new stimuli.
+										</td>
+									</tr>
+									<tr>
+										<td>7) <b>Speed: </b>Changes in the network can be
+											propagated very fast.
+										</td>
+									</tr>
+									<tr>
+										<td>8) <b>Modularity:</b> Agents act independently of
+											other network layers.
+										</td>
+									</tr>
+									<tr>
+										<td>9) <b>Parallelism:</b> Agents' operations are
+											inherently parallel.
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Disadvantages:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) <b>Behaviour: </b>Difficult to predict the
+											behaviour from the individual rules.
+										</td>
+									</tr>
+									<tr>
+										<td>2) <b>Knowledge: </b>
+											The functions of colony could not be understood with the knowledge of functioning of a agent.
+										</td>
+									</tr>
+									<tr>
+										<td>3) <b>Sensitivity: </b>Even a small change in the simple rules
+											results in different group level behaviour.
+										</td>
+									</tr>
+									<tr>
+										<td>4) <b>Action: </b>Agent behavior looks like
+											noise as action of choice is stochastic.
+										</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><a
+											href="http://chemoton.wordpress.com/tag/collective-intelligence/">
+												<b>First level Swarm Intelligence:</b>
+										</a></td>
+									</tr>
+									<tr>
+										<td>It uses a Positive Feedback
+											Pheromone to mark low-distance routes with a entry signal for their
+											colleagues.</td>
+									</tr>
+
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><a
+											href="http://chemoton.wordpress.com/tag/collective-intelligence/">
+												<b>Second level Swarm Intelligence:</b>
+										</a></td>
+									</tr>
+									<tr>
+										<td>It uses a Negative Pheromone to mark unrewarding
+											paths with a no-entry signal.</td>
+									</tr>
+
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><a
+											href="http://chemoton.wordpress.com/tag/collective-intelligence/">
+												<b>Exploration vs Exploitation: Important Factors in the design of the Optimization Techniques </b>
+										</a></td>
+									</tr>
+									<tr>
+										<td>1) In swarm intelligence systems, Exploration Phase
+											introduces the freedom and Exploitation Phase introduces the
+											usage of collected search experience to locate the optimal solutions without wasting too much time.</td>
+									</tr>
+									<tr>
+										<td>2) Two new techniques have been introduced for Particle Swarm Optimization: <ul><li>Resets increase exploitation</li>
+										<li>Delayed Updates increase exploration</li></ul></td>
+									</tr>
+
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><a
+											href="http://chemoton.wordpress.com/tag/collective-intelligence/">
+												<b>Swarmic Freedom vs Random Freedom: </b>
+										</a></td>
+									</tr>
+									<tr>
+										<td>1) The freedom of the swarm (i.e. Swarmic Freedom) is
+											maintained by the swarm intelligence algorithms, whereas the freedom of the agents (i.e. Random Freedom) is maintained by the randomised
+											algorithms.</td>
+									</tr>
+									<tr>
+										<td>2) Swarm Freedom naturally enables the system to
+											maintain recognisable ﬁdelity to the original input whereas
+											when more freedom is granted to the randomised algorithm, the
+											algorithm soon begins to deviate excessively.</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a href="si/img/strategy.png" target="_blank"> <img alt=""
+							src="si/img/strategy.png" height="200">
+						</a>
+
+						<div class="item-content">
+							<div class="description">
+								<table>
+								<tr>
+										<td><a
+											href="http://aser.ornl.gov/cui/workshop/presentation/Swarm%20Intelligence%20Bio-inspired%20Emergent%20Intelligence.pdf">
+												<b>The Bottom-Up Strategy for Engineering Emergent Behavior: </b>
+										</a></td>
+									</tr>
+									<tr>
+										<td>
+												This strategy in swarm system builds
+											complex social simulations by designing agents with individual
+											self-organization, psychologically reasonable behaviors to
+											generate consequential social event / emergent behaviour.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><a
+											href="http://chemoton.wordpress.com/tag/collective-intelligence/">
+												<b>Weak vs. Strong Computational Creativity In Swarm
+													Intelligence Systems:</b>
+										</a></td>
+									</tr>
+
+									<tr>
+										<td>1) In Strong Computational Creativity, artificial
+											intelligence is strong whereas in Weak Computational
+											Creativity, artificial intelligence is weak.</td>
+									</tr>
+									<tr>
+										<td>2) In Strong Computational Creativity, the machines are expected to be creative and to have
+											genuine understanding and other cognitive states as well as
+											capability of conscious thinking and therefore the stress
+											for the emergent creativity is on the signiﬁcant impact of
+											both freedom and constraint whereas Weak Computational
+											Creativity does not go beyond exploring the simulation of
+											human creativity.</td>
+									</tr>
+									<tr>
+										<td>3) Swarm intelligence via its infamous struggle
+											identifies a suitable balance between exploration and
+											exploitation phases to provide a valuable mean 
+											artiﬁcial creativity approach.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">General Swarm Principles:</a></b></td>
+									</tr>
+									<tr>
+										<td><b>1) Proximity principle:</b> The basic units of a
+											swarm should be capable of giving the respond back to to environmental
+											variance triggered by interactions among
+											agents. However, some fundamental behaviors are shared such
+											as living-resource searching and nest-building.</td>
+									</tr>
+									<tr>
+										<td><b>2) Quality principle:</b> A swarm should be able
+											to respond to quality factors such as determining the safety
+											of a location.</td>
+									</tr>
+									<tr>
+										<td><b>3) Principle of diverse response:</b> Resources should not be concentrated in a narrow region.
+										 The distribution should be designed so that each agent will be maximally protected
+facing environmental fluctuations.
+</td>
+									</tr>
+									<tr>
+										<td><b>4) Principle of stability:</b> The population
+											should not change its mode of behavior every time the
+											environment changes.</td>
+									</tr>
+									<tr>
+										<td><b>5) Principle of adaptability:</b> The swarm is
+											sensitive to the changes in the environment that result
+											 in different swarm behaviour.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+								<tr>
+										<td><b><a href="swarm-intelligence.html#">Most Common Principles:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) Individuals are attracted to each other.</td>
+									</tr>
+									<tr>
+										<td>2) When they come closer in space, they start to focus
+											in the same direction.</td>
+									</tr>
+									<tr>
+										<td>3) They avoid collision by moving away from each
+											other. They keep certain distance from each other.</td>
+									</tr>
+									<tr>
+										<td>4) Individuals
+											interact with local, near neighbours and trust only a few of
+											them. This rule is known as self-organization.
+										</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Business Swarm:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) Swarm intelligence can be used by any business or
+											social cause. It could give you cost efficiency advantage.</td>
+									</tr>
+									<tr>
+										<td>2) Swarm Intelligence emerges when individuals unite
+											to a cause.</td>
+									</tr>
+									<tr>
+										<td>3) Individuals unite to a cause when the goal is
+											clearly defined, immediately seen as achievable, touches the
+											individuals who are ready to jump in it without asking
+											anyone's permission and electrify individuals to shoot.</td>
+									</tr>
+									<tr>
+										<td>4) Your oganization must be optimized for speed,
+											trust and scalability.</td>
+									</tr>
+									<tr>
+										<td>5) Build a scafffolding that supports the swarms.</td>
+									</tr>
+									<tr>
+										<td>6) Your organization must be decentralized with small
+											distributed responsibilities.</td>
+									</tr>
+									<tr>
+										<td>7) Different approaches must be carried out in parallel.</td>
+									</tr>
+									<tr>
+										<td>8) Make the environment full of fun.</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick"
+					style="width: 860px; background: transparent;">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table align=center>
+									<tr>
+										<td><h3>
+												<a name="aspects">Swarm Intelligence Aspects:</a>
+											</h3></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Distribution:</a> </b></td>
+									</tr>
+									<tr>
+										<td>Agents choose their actions and then carry them out.
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Stigmergy:</a> </b></td>
+									</tr>
+									<tr>
+										<td>1) Agents indirectly interact via environmental modification, the phenomenon known as stigmergy.</td>
+									</tr>
+									<tr>
+										<td>2) Stigmergy is basically the context awareness.</td>
+									</tr>
+									<tr>
+										<td>3) Stigmergy decouples agents' interactions.</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Cooperation: </a></b></td>
+									</tr>
+
+									<tr>
+										<td>1) Agents cooperate to emerge a non-deterministic, complex collective behaviour.</td>
+									</tr>
+									<tr>
+										<td>2) Agents cooperate in order to solve complex tasks.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Self Organization: </a></b> <br/>The bases
+											of self-organization are:
+									<tr>
+										<td>1) Positive feedback (amplification): It promotes
+											better solutions by allocating to them more agents.</td>
+									</tr>
+									<tr>
+										<td>2) Negative feedback (for counter-balance and
+											stabilization): It may avoid that all individuals converge to
+											the same behavior or to the same state.</td>
+									</tr>
+									<tr>
+										<td>3) Amplification of fluctuations (randomness, errors,
+											random walks)</td>
+									</tr>
+									<tr>
+										<td>4) Multiple social interactions</td>
+									</tr>
+									<tr>
+										<td>5) There is a continuous tension between positive
+											feedback and negative feedback and this is what actually
+											happens in most known self-organization phenomena, e.g.,
+											cellular automata, markets, complex networks, etc.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Emergence: </a></b></td>
+									</tr>
+									<tr>
+										<td>1) Complicated intelligent behaviour emerges from
+											simple agents following simple rules.</td>
+									</tr>
+									<tr>
+										<td>2) <b>Weak Emergence:</b> You can trace the agent
+											behaviour from emergent properties.
+										</td>
+									</tr>
+									<tr>
+										<td>3) <b>Strong Emergence:</b> Agent behaviour is not
+											directly traceable from emergent behaviour.
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Imitates Nature:</a> </b></td>
+									</tr>
+									<tr>
+										<td>Artificial swarm is designed by imitating the natural swarm behaviour.</td>
+									</tr>
+									<tr>
+										<td>General swarm behaviour:</td>
+									</tr>
+									<tr>
+										<td>1) Foraging: To search for the food</td>
+									</tr>
+									<tr>
+										<td>2) To construct the nest</td>
+									</tr>
+									<tr>
+										<td>3) To move in the environment</td>
+									</tr>
+									
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick"
+					style="width: 860px; background: transparent;">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table align=center>
+									<tr>
+										<td><h3>
+												<a name="machinery">Swarm Machinery / Swarm Inteligence
+													Mechanisms:</a>
+											</h3> A Swarm Machinery is all about Agents, Interactions and the
+											Environment.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Environmental mechanism:</a></b></td>
+									</tr>
+									<tr>
+										<td>Agents indirectly interact with each other via environmental modification which serves as external memory. 
+										The phenomenon is known as Stigmergy
+										which means stimulation by work.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Interaction mechanism:</a></b></td>
+									</tr>
+									<tr>
+										<td>There are no direct communications but indirect
+											interactions between the agents via environmental modification known as stigmergy / stimulation by work.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Activities of agents</a></b></td>
+									</tr>
+
+									<tr>
+										<td>1) Action is stochastic choice based, a balance between
+											a simple perception-reaction model and a random model</td>
+									</tr>
+									<tr>
+										<td>2) Agents react on the basis of simple perception-reaction
+											model according to which individuals perceive the local
+											properties of the environment and also affect the properties
+											of the environment to some extent.</td>
+									</tr>
+									<tr>
+										<td>3) &nbsp; Agents move in environment</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!--  </div>-->
+
+
+
+
+				<div class="item masonry-brick"
+					style="width: 860px; background: transparent;">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table align=center>
+									<tr>
+										<td><h3>
+												<b><a name="technologies">Swarm Technologies:</a></b>
+											</h3></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--  	<div id="items" class="row-fluid">-->
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/PSO.jpg"
+							target="_blank"> <img alt="" src="si/img/PSO.jpg"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.cleveralgorithms.com/nature-inspired/swarm/pso.html">
+													Particle Swarm Optimization:</a> </b></td>
+									</tr>
+									<tr>
+										<td><b>Inspiration: </b>Particle Swarm Optimization is
+											inspired by the social foraging behavior of some animals such
+											as flocking behavior of birds and the schooling behavior of
+											fishes.</td>
+									</tr>
+									<tr>
+										<td><b>Strategy: </b>The goal of the algorithm is to have
+											all the particles locate the optima in a multi-dimensional
+											space, initially assigned with random position and random
+											velocity, gradually advancing towards the local optima
+											through the use of exploration and exploitation of good,
+											known positions in space.</td>
+									</tr>
+
+									<tr>
+										<td><b>PSO Rules:</b></td>
+									</tr>
+									<tr>
+										<td>1) <b> Separation:</b> Do not run into flockmates.
+										</td>
+									</tr>
+									<tr>
+										<td>2) <b> Alignment:</b> Each align their own heading to the
+											average of the neighbours.
+										</td>
+									</tr>
+									<tr>
+										<td>3) <b> Cohesion:</b> Move towards the average position
+											of neighbours.
+										</td>
+									</tr>
+									<tr>
+										<td>4) <b>Desire factor per bird for roosting areas:</b>
+											It is the need of roosting or swarming which
+											gets stronger if a defined roosting area is approachable.
+										</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/ANT.jpg"
+							target="_blank"> <img alt="" src="si/img/ANT.jpg"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.cleveralgorithms.com/nature-inspired/swarm/ant_system.html">
+													Ant System:</a> </b></td>
+									</tr>
+									<tr>
+										<td><b>Inspiration: </b>It is inspired by the pheromone
+											communication of the blind ants regarding a good path between
+											colony and the food source in an environment, the phenomenon known as
+											stigmergy. The probability of the ant following a certain
+											route is not only a function of pheromone intensity but also
+											a function of distance to that city, the function known as visiblity.</td>
+									</tr>
+									<tr>
+										<td><b>Strategy:</b> The objective of the strategy is to
+											exploit historic i.e. pheromone based and heuristic information to
+											construct candidate solutions each in a probabilistic
+											step-wise manner and fold the information learned from
+											constructing solutions into the history. The probability of
+											selecting a component is determined by the heuristic
+											contribution of the component to the overall cost of the
+											solution and the quality of solution and history is updated
+											proportional to the quality of the best known solution.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/bee.jpg"
+							target="_blank"> <img alt="" src="si/img/bee.jpg"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.cleveralgorithms.com/nature-inspired/swarm/bees_algorithm.html">
+													Bees Algorithm:</a> </b></td>
+									</tr>
+									<tr>
+										<td><b>Inspiration: </b>It is inspired by the foraging
+											behaviour of the honey bees. The hive sends out the Scout
+											bees which when locate nectar (a sugary fluid secreted within flowers), return to the hive and
+											communicate the other bees the fitness, the quality, distance
+											and direction of the food source via waggle dance.</td>
+									</tr>
+									<tr>
+										<td><b>Strategy: </b>The objective of the algorithm is to
+											locate and explore good sites within a problem search space.
+											Many scout bees are sent out, each iteration is always in search of
+											additional good sites which are continually exploited in the
+											  a local search application.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/firework.png"
+							target="_blank"> <img alt="" src="si/img/firework.png"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.cleveralgorithms.com/nature-inspired/swarm/bees_algorithm.html">
+													Fireworks Algorithm:</a> </b></td>
+									</tr>
+									<tr>
+										<td><b>Inspiration: </b>It is inspired by observing the
+											firework explosion.</td>
+									</tr>
+									<tr>
+										<td><b>Strategy:</b> In the FA, two explosion (search)
+											processes are employed and mechanisms for keeping the diversity
+											of sparks are also well designed. The explosion process of a
+											firework can be viewed as a search in the local space around
+											a specific point where the firework is set off through the
+											sparks generated in the explosion.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<table>
+							<tr>
+								<td><a class="image" title="Title"
+									href="si/img/Bacteria.jpg" target="_blank"> <img alt=""
+										src="si/img/Bacteria.jpg" height="200">
+								</a></td>
+							</tr>
+							<tr>
+								<td>Fig: State transition in lifecycle model of bacteria in
+									BFO</td>
+							</tr>
+						</table>
+						<div class="item-content">
+							<div class="description">
+								<p>
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.cleveralgorithms.com/nature-inspired/swarm/bfoa.html">
+													Bacterial Foraging Optimization Algorithm:</a> </b></td>
+									</tr>
+
+
+									<tr>
+										<td><a href="si/img/EColi.jpg" target="_blank"><img
+												src="si/img/EColi.jpg" height="200"></a></td>
+									</tr>
+									<tr>
+										<td>Fig: Chemotactic behavior of E. coli - run and
+											tumble</td>
+									</tr>
+									<tr>
+										<td><b>Inspiration: </b>It is inspired by the the
+											foraging behavior of E.coli bacteria that will perceive
+											chemical gradients in the environment (such as nutrients) and
+											move towards or away from the specific signals.</td>
+									</tr>
+									<tr>
+										<td><b><a
+												href="http://prezi.com/-ibcqf8lzv69/copy-of-bacterial-foraging-optimization/"><br />
+													Strategy: </a></b>The objective of the algorithm is to allow cells
+											to stochastically and collectively swarm toward optima
+											through a series of three processes:
+											<ol>
+												<li><b>Chemotaxis:</b> Here the cost of the cells is
+													inversely proportional to the proximity to other cells and
+													cells move along manipulated cost surface area one at a time.</li>
+												<li><b>Reproduction:</b> Only those cells contribute to
+													this phase who remain healthiest in their overall
+													life-time.</li>
+												<li><b>Elimination-dispersal:</b> Some cells are
+													discarded and new cells are inserted.</li>
+											</ol></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/RFD.jpg"
+							target="_blank"> <img alt="" src="si/img/RFD.jpg"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://en.wikipedia.org/wiki/Swarm_intelligence#River_Formation_Dynamics">
+													River Formation Dynamics Algorithm:</a> </b></td>
+									</tr>
+									<tr>
+										<td><b>Inspiration: </b>RFD is inspired by how water
+											forms rivers by eroding the ground and depositing sediments.
+											As water transforms the environment, altitudes of places are
+											dynamically modified, and decreasing gradients are
+											constructed. The gradients are followed by subsequent drops
+											to create new gradients, reinforcing the best ones. By doing
+											so, good solutions are given in the form of decreasing
+											altitudes.</td>
+									</tr>
+									<tr>
+										<td><b>Metaphor: </b>A set of drops placed at the
+											starting point is subjected to gravitational force that
+											attracts them to the center of the earth. As a result, these
+											drops are distributed throughout their environment, seeking
+											the lowest point or the sea. As a result, the riverbeds
+											are formed, often containing many meanders.</td>
+									</tr>
+									<tr>
+										<td><b>Strategy: </b>RFD utilizes this idea into the
+											graph theory problems (for example, the problems of finding a
+											minimum distance tree and finding a minimum spanning tree in
+											a variable-cost graph), creating a set of agent-droplets
+											moving on the edges between nodes according to the decreasing
+											gradient of the nodes and exploring the environment for the
+											best solution following the mechanisms of erosion and soil
+											sedimentation that relate to the altitude assigned to each
+											node.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/IWD.png"
+							target="_blank"> <img alt="" src="si/img/IWD.png"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<p>
+								<table>
+									<tr>
+										<td><b><a href="http://en.wikipedia.org/wiki/Intelligent_Water_Drops_algorithm">Intelligent Water Drops:</a> </b></td>
+									</tr>
+									<tr>
+										<td><b>Inspiration:</b> Intelligent water drops algorithm
+											(IWD) inspired by natural rivers and how they find almost
+											optimal paths to their destination. These near optimal or
+											optimal paths follow from actions and reactions occurring
+											among the water drops and the water drops with their
+											riverbeds.</td>
+									</tr>
+									<tr>
+										<td><b>Metaphor: </b>This is achieved by three important
+											characteristics of water drops. First, they have a velocity
+											that allows them to gather soil from the river bed, thus the
+											higher the speed of drops, the larger the amount of soil it
+											carries. In this way the water drop cleanse the path for the
+											forthcoming drops. Second, the velocity of water drops
+											increases more on paths with minimal soil than on one with the
+											high soil. Third, when a single water drop has to select a
+											path, it selects the one with the lowest amount of soil.</td>
+									</tr>
+									<tr>
+										<td><b>Strategy: </b>Several artificial water drops
+											cooperate to change their environment in such a way that the
+											optimal path is revealed as the one with the lowest soil on
+											its links. The solutions are incrementally constructed by the
+											IWD algorithm.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/GSA.jpg"
+							target="_blank"> <img alt="" src="si/img/GSA.jpg"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://en.wikipedia.org/wiki/Swarm_intelligence#Gravitational_search_algorithm">
+													Gravitational search algorithm:</a> </b></td>
+									</tr>
+									<tr>
+										<td><b>Inspiration:</b> Gravitational search algorithm
+											(GSA) is a newly developed stochastic search algorithm based
+											on the Newtonian gravity- "Every particle in the universe
+											attracts every other particle with a force that is directly
+											proportional to the product of their masses and inversely
+											proportional to the square of the distance between them" and the
+											mass interactions.</td>
+									</tr>
+									<tr>
+										<td><b>Strategy:</b> In this approach, the search agents
+											are a collection of masses which interact with each other
+											based on the Newtonian gravity and the laws of motion in
+											which all of the objects attract each other by the gravity
+											force, while this force causes a global movement of all
+											objects towards the objects with heavier masses. The heavy
+											masses correspond to good solutions of the problem.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b> <a
+												href="http://pakacademicsearch.com/pdf-files/eng/321/184-197%20Vol%203,%20No%205%20(2011).pdf">
+													Ant based Clustering Algorithm:</a></b></td>
+									</tr>
+
+									<tr>
+										<td>1) ACO is finding the shortest way by the ants and ACO
+											clustering is the finding the shortest way between the data
+											items of a given data-set to be clustered. For example: ACO
+											based documents clustering is finding the most
+											alike(the shortest way between the documents) documents.</td>
+									</tr>
+									<tr>
+										<td>2) Seen purely as a clustering algorithm, ant-based
+											clustering performs well in comparison to the other popular clustering
+											methods of k-means, agglomerative hierarchical clustering and
+											one dimensional self-organising maps.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<p>
+								<table>
+									<tr>
+										<td><b> <a
+												href="http://www.researchgate.net/publication/220888984_A_bio-inspired_algorithm_for_searching_relationships_in_Social_Networks">
+													SoS-ACO (Sense of Smell - Ant Colony Optimization): </a></b>A
+											Bio-inspired algorithm for searching Relationships in Social
+											Networks.</td>
+									</tr>
+
+									<tr>
+										<td>1) It accelerates the search for relationships among
+											elements present in social networks.</td>
+									</tr>
+									<tr>
+										<td>2) It involves locating the chain of reference that
+											leads from one person to another by accelerating the search
+											for routes between two nodes that belong to a graph that
+											represents a social network.</td>
+									</tr>
+									<tr>
+										<td>3) SoS-ACO is based on the way the ants move when they
+											search for food.</td>
+									</tr>
+									<tr>
+										<td>4) The application of this algorithm to real social
+											networks obtains an optimal response in a very short time
+											(tens of milliseconds).</td>
+									</tr>
+
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/SFA.png"
+							target="_blank"> <img alt="" src="si/img/SFA.png"
+							height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="http://www2.ee.unsw.edu.au/~wzhang/Poster/Poster_XiaLi.pdf">Shuffled Frog-Leaping</a></b></td>
+									</tr>
+									<tr>
+										<td><b>Metaphor:</b> The SFL algorithm involves a
+											population of possible solutions deﬁned by a set of frogs
+											(i.e. solutions) that is partitioned into subsets referred to
+											as memeplexes. The different memeplexes are considered as
+											different cultures of frogs, each performing a local search.
+											Within each memeplex, the individual frog holds ideas, that
+											can be inﬂuenced by the ideas of other frogs, and evolve
+											through a process of memetic evolution. After a number of
+											memetic evolution steps, ideas are passed among memeplexes in
+											a shuffling process. The local search and the shuffling
+											processes continue until convergence criteria are satisﬁed.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/CS.png"
+							target="_blank"> <img alt="" src="si/img/CS.png" height="200">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.slideshare.net/biswajitpanday/cuckoo-search-35892331">
+													Cuckoo Search: </a></b></td>
+									</tr>
+
+									<tr>
+										<td>CS is an optimization algorithm inspired by the
+											obligate blood parasitism of some cuckoo species by laying
+											their eggs in the nests of other host birds.</td>
+									</tr>
+									<tr>
+										<td><b>Methaphor: </b> Cuckoos have an aggressive
+											reproduction strategy that involves the female laying her
+											fertilized eggs in the nests of other species so that
+											surrogate parents accidently raise her brood. Sometimes the
+											cuckoo's egg in the host nest is discovered, the surrogate
+											parents either throw it out or abandon the nest and builds
+											their own brood elsewhere but otherwise once the first cuckoo
+											chick is hatched, it first evicts the host eggs by blindly
+											propelling the eggs out of the nest so that its share of food
+											is increased.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- </div>-->
+
+
+				<!--  <div id="items" class="row-fluid">-->
+				<div class="item masonry-brick"
+					style="width: 860px; background: transparent;">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table align=center>
+									<tr>
+										<td><h3>
+												<a name="languages">Swarm Languages:</a>
+											</h3></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.aamas-conference.org/Proceedings/aamas08/proceedings/pdf/paper/AAMAS08_0254.pdf">Protoswarm:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) It is a programming Language for programming Multi-robot System
+											Using the Amorphous Medium Abstraction.</td>
+									</tr>
+									<tr>
+										<td>2) <b>Inspiration: </b>It is inspired by the
+											continuous space-time model of Proto and extends this type of
+											model to program swarm of robots.
+										</td>
+									</tr>
+									<tr>
+										<td>3) <b>Amorphous Medium Abstraction</b> is achieved
+											using two mechanisms: a language, called Protoswarm, which
+											provides continuous space and time semantics, and a runtime
+											library which approximates the semantics on the given
+											hardware.
+										</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://blog.locut.us/2008/10/07/swarm-a-true-distributed-programming-language/">
+													Swarm</a>:</b></td>
+									</tr>
+									<tr>
+										<td>1) It is a true distributed programming language.</td>
+									</tr>
+
+									<tr>
+										<td>2) <b>The Fundamental Concept behind Swarm: </b> We
+											should move the computation, not the data.
+										</td>
+									</tr>
+									<tr>
+										<td>3) <b>The Swarm Prototype: </b> It is a 
+											stack-based language, similar to a primitive version of the
+											Java bytecode interpreter and is now implemented as a Scala
+											library.
+									<tr>
+										<td>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://education.mit.edu/starlogo/"> StarLogo:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) A programming language and programming environment of
+											decentralized multi-agent system.</td>
+									</tr>
+									<tr>
+										<td>2) StarLogo is a programmable modeling environment
+											for exploring the working of decentralized systems -
+											systems which are organized without an organizer, coordinated
+											without a coordinator.</td>
+									</tr>
+									<tr>
+										<td>3) With StarLogo, you can model (and gain insights
+											into) many real-life phenomena, such as bird flocks, traffic
+											jams, ant colonies, and market economies.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="swarm-intelligence.html#">Growing Point Language:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) It is a programming language to program amorphous computing
+											medium to generate highly complex and prespecified patterns.</td>
+									</tr>
+									<tr>
+										<td>2) It is a programming
+											language that facilitates the self-organisation of complex
+											pre-specified patterns, such as the interconnection structure
+											of an arbitrary electrical circuit.</td>
+									</tr>
+									<tr>
+										<td>3) <b>Inspiration</b>: It is inspired by a botanical
+											metaphor: a growing point is a locus of activity that can
+											propagate through the amorphous computing medium by
+											transferring its activity from one computing element to a
+											neighbouring one, according to the growing point's tropism
+											(pheromone).
+										</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<p><table></table></p>
+							</div>
+						</div>
+					</div>
+				</div>-->
+
+				<!--  </div>-->
+
+				<!--  <div id="items" class="row-fluid">-->
+				<div class="item masonry-brick"
+					style="width: 860px; background: transparent;">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table align=center>
+									<tr>
+										<td><h3>
+												<a name="frameworks">Swarm Frameworks:</a>
+											</h3></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.lero.ie/sites/default/files/UCD_Emil_Vassev_ver2.FinalDraft.pdf">
+													ASSL (Autonomic System Specification Language):</a></b></td>
+									</tr>
+
+									<tr>
+										<td>1) ASSL is a framework for formally specifying and
+											generating autonomic systems.</td>
+									</tr>
+									<tr>
+										<td>2) AS are formal executable models with an
+											interaction protocol and autonomic elements.</td>
+									</tr>
+									<tr>
+										<td>3) In an endeavor to specify <a href="swarm-intelligence.html#ANTS">ANTS
+												(Autonomous Nano-Technology Swarm)</a> with ASSL, we have
+											emphasized modeling ANTS' self-management policies such as
+											self-configuring, self-healing, self-scheduling, and emergent
+											self-adapting. In addition, we have developed specification
+											models for the ANTS safety requirements.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.swarm-organ.eu/content/about-project">Swarm
+													Organ:</a></b> A theoretical framework for organising the swarm of Gene
+											Regulatory Network-controlled agents which display Adaptive
+											Tissue like organization.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www3.nd.edu/~dddas/AFOSR/resources/papers/ndiccs2014.pdf">
+													DDDAS (Dynamic Data Driven Application System) for Artificial Swarm
+													Control:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) It is the ability to dynamically incorporate
+											additional data into an executing application, and in
+											reverse, ability of an application to dynamically steer the
+											measurement process.</td>
+									</tr>
+									<tr>
+										<td>2) Two application designs have been proposed to control the swarm
+											 application via DDDAS: Swarm
+												Application Architecture integrated with DDDAS and DDDAS Swarm Control Framework.<br/>
+											  3) <b> Swarm
+												Application Architecture: </b><br /><br /> <a href="si/img/DDDAS.png" target="_blank"> <img
+												src="si/img/DDDAS.png" height="200"></a> <br /><br />Here a swarm
+											application has been integrated with DDDAS to control 
+											several agents by broadcasting one or few swarm parameters
+											and then report application performance to the central
+											controller as a single, aggregated statistic.
+										</td>
+									</tr>
+									<tr>
+										<td>4)<b> DDDAS Swarm Control Framework:</b> DDDAS
+											framework with feedback control loop for swarm control
+											allows the controller to appropriately adjust agents'
+											parameters for the application. <br /><br /> <a
+											href="si/img/DDDAS1.png" target="_blank"><img
+												src="si/img/DDDAS1.png" height="200"></a><br /><br />
+											<ul>
+												<li>This framework incorporates the swarm application architecture.</li>
+												<li>It facilitates improved analytic, predictive, and
+													decision-making capabilities of swarm application by
+													Synergestic Feedback Loop which is achieved by executing the same
+													swarm application in  multiple parallel simulations, each
+													utilize the same real data with different agent-level
+													control parameters.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<p>
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.infotech.monash.edu.au/srlab/a-distributed-framework-for-supporting-3d-swarming-applications.pdf">
+													A Distributed Framework for Supporting 3D Swarming
+													Applications:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) It supports swarming within in-flight sensor
+											networks (swarm of quad copters in this study), which require
+											coordinated movement in 3D space.</td>
+									</tr>
+									<tr>
+										<td>2) High impact 3D swarming applications include
+											autonomous mapping, surveying, servicing, environmental
+											monitoring and disaster site management.</td>
+									</tr>
+									<tr>
+										<td>3) A general hardware setting for controlling swarms
+											of in-flight sensor networks has been proposed by combining IoT (Internet of Things)
+											technology with swarm robotics.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.dcsc.tudelft.nl/~bdeschutter/pub/rep/08_002.pdf">
+													A General Modeling Framework for Swarm:</a></b></td>
+									</tr>
+									<tr>
+										<td><b>Inspiration:</b><br/> 1) In the majority of the research
+											on swarm intelligent systems, the moving agents in the swarm
+											are modeled as simple reactive agents. Current swarm models
+											comprise a little intelligence to fully exploit the
+											potential of swarms.<br /> 2) The
+											analysis of a swarm intelligence system typically focuses on
+											the dynamics of the swarm as a whole, rather than on the
+											dynamics of the individual agents.</td>
+									</tr>
+									<tr>
+										<td><b>Concept:</b> <ul>
+												<li>The most prevalent control problem in
+													swarm literature: Aggregation and coordinated motion of
+													the swarm-bot are studied in this reasearch.</li>
+												<li>This framework uses two major swarm
+													intelligence methods in optimization and control, namely
+													Particle Swarm Optimization (PSO) and Artiﬁcial Potential
+												Fields for Swarm Aggregation.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.aisb.org.uk/convention/aisb08/proc/proceedings/11%20Swarm%20Intelligence/11.pdf">
+													A Unified Framework for Swarm Based Image Analysis:</a></b></td>
+									</tr>
+
+									<tr>
+										<td>1) It is only a proposal and currently there is no
+											way of implementing swarm algorithm for image ananlysis.</td>
+									</tr>
+									<tr>
+										<td>2) The main goal is to achieve a global perception of
+											one image as the emergent sum of local perceptions of the
+											whole colony.</td>
+									</tr>
+									<tr>
+										<td>3) Unlike ACO and PSO, this focuses on constructing
+											different rules and interactions for obtaining a specific
+											emergent behavior, which is then used in an image analysis
+											context.</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/Self-Chord.gif"
+							target="_blank"> <img alt="" src="si/img/Self-Chord.gif"
+							height="100"></a> <a class="image" title="Title"
+							href="si/img/Self-Chord1.gif" target="_blank"><img alt=""
+							src="si/img/Self-Chord1.gif" height="100"></a> Figure:
+						No direct association among a peer index and the keys stored by
+						the peer with each key is stored in a peer whose centroid is very
+						close to that key value
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://self-chord.icar.cnr.it/applications/j2ee-modules/sc/">
+													Self-Chord:</a></b> It is a Bio-inspired P2P Framework for
+											Self-organized, Distributed Grid Information System.</td>
+									</tr>
+									<tr>
+										<td>1) Self-Chord is a P2P system that inherits Chord-like structured systems for the construction
+											and maintenance of an overlay of peers, but derives the
+										    autonomy
+											behavior, self-organization and capacity to adapt to a
+											changing environment features from ant-inspired algorithms for key ordering and discovery.</td>
+									</tr>
+									<tr>
+										<td>2) Peer indexes and resource keys are uncorrelated,
+											which opens the possibility to give a semantic meaning to
+											keys and perform class (or range) queries.</td>
+									</tr>
+									<tr>
+										<td>3) Mobile agents go through the Chord ring and
+											order resource keys.</td>
+									</tr>
+									<tr>
+										<td>4) <b>Benefits:</b> 1) Dynamic behavior (management
+											of perturbations, such as the connection of new peers), 2)
+											Load balancing, 3) Possibility to serve range queries, as the
+											keys can be assigned semantic values.
+										</td>
+									</tr>
+
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/so-grid.jpg"
+							target="_blank"> <img alt="" src="si/img/so-grid.jpg"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.sciweavers.org/read/so-grid-a-self-organizing-grid-featuring-bio-inspired-algorithms-273804">
+													So-Grid:</a></b> It is a Bio-Inspired P2P Framework for Self-organized,
+											Distributed Grid Information System.</td>
+									</tr>
+									<tr>
+										<td>1) A set of bio-inspired algorithms tailored to the
+											decentralized construction of a Grid information system that
+											features adaptive and self-organization characteristics.</td>
+									</tr>
+									<tr>
+										<td>2) So-Grid provides two main functionalities which is
+											being exploited continuously and concurrently: <br />
+											<ul><li>Logical Reorganization of Resources, inspired by the behavior
+											of ants and termites, is done by moving and collecting the
+											items within their environment and then spatially sorting resource
+											descriptors over the Grid according to their classiﬁcation.</li> 
+											<li>Resource Discovery, inspired by the ants mechanism in which they search for food sources by following the
+											pheromone traces left by other ants.</li></ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=4610103&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4610103">Antare:</a></b><br/>
+										1) It is an Ant-Inspired P2P Information System for a Self-Structured Grid.<br/>
+									    2) It is
+											designed to effectively disseminate and reorganize
+											resources to speed up resource discovery operations in a
+											dynamically changing environment.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://sourceforge.net/projects/myra/files/myra/3.5.0/">Myra:</a>
+										</b> A cross-platform Ant Colony Optimization framework written in
+											Java</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.aco-metaheuristic.org/aco-code/public-software.html">
+													AntCar:</a></b> A program for solving the car sequencing problem.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="http://swarmframework.org/">The
+													Swarm Framework:</a></b></td>
+									</tr>
+									<tr>
+										<td>1) The ultimate Platform as a Service used for the distributed
+							computation in the cloud.</td>
+									</tr>
+									<tr>
+										<td>It is going
+											much further than systems like Google App Engine in relieving
+											the programmer from the difficulties of cloud computing.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--  </div>-->
+
+				<!--  	<div id="items" class="row-fluid">-->
+				<div class="item masonry-brick"
+					style="width: 860px; background: transparent;">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table align=center>
+									<tr>
+										<td><h3>
+												<a name="tools">Swarm Tools for Optimization and Feature
+													Extraction:</a>
+											</h3></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.aaai.org/Papers/AAAI/2008/AAAI08-301.pdf">
+													The Swarm Application Framework (SAF):</a></b> <br/>A tool that allows
+											the engineer to design swarm applications from the top down,
+											so the design problem becomes more manageable.</td>
+									</tr>
+									<tr>
+										<td><br/>A prototype of the framework: <a
+											href="si/img/SAFP.png" target="_blank"><img
+												src="si/img/SAFP.png" height=200></a></td>
+									</tr>
+									<tr>
+										<td><a href="si/img/SAFP2.png" target="_blank"><img
+												src="si/img/SAFP2.png" height=200></a></td>
+									</tr>
+									<tr>
+										<td><br/>The goals of SAF are:</td>
+									</tr>
+									<tr>
+										<td>
+											<ul>
+												<li>To make the development of swarm applications
+													intuitive.</li>
+												<li>To allow the engineer to design swarm applications
+													from the abstract (swarm) level instead of the individual
+													(agent) level.</li>
+												<li>To modify the swarm behavior with top-level
+													rules instead of modifying multiple low-level rules.</li>
+												<li>To make rule abstraction a simple process, thus
+													promoting the use of rule hierarchies.</li>
+												<li>To provide a collection of modules that developers can
+													use to quickly build new applications.</li>
+												<li>To enable the engineers to focus on the behavior and
+													properties of the swarm, rather than on the low-level details
+													of an agent behavior.</li>
+												<li> To create the swarm applications via the Rule abstraction mechanism in SAF is
+													much easier than creating them from scratch.</li>
+											</ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/UAVs.png"
+							target="_blank"> <img alt="" src="si/img/UAVs.png" height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://oa.upm.es/7206/1/ALEKSANDAR_JEVTIC.pdf">
+													Route Optimization of Unmanned Aerial Vehicles (UAV):</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>UAV is an aircraft without the onboard presence of
+													pilots.</li>
+												<li>It includes software and hardware agents that
+													communicate or displace in an optimal manner.</li>
+												<li>The UAVs are engaged in a simulated area coverage
+													scenario with a defined set of waypoints. The objective is
+													to find the shortest route that connects all the waypoints
+													in order to optimize the time and the cost of the
+													UAV&#8217;s flight.</li>
+												<li>Ant system algorithm is used for UAVs route
+													optimization.</li>
+												<li>It is being highly used in commercial aplications
+													such as telecommunications, ground traffic control, search
+													and rescue operations, and crop monitoring among others.</li>
+												<li>UAVs assist with frost protection, irrigation and
+													crop management in agriculture.</li>
+												<li>Together with Mobile Ground Station systems, UAVs
+													offer persistent surveillance, enhanced situational
+													awareness, and actionable intelligence to the law enforcement
+													and the security personnel.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/EdgeD.png"
+							target="_blank"> <img alt="" src="si/img/EdgeD.png"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://oa.upm.es/7206/1/ALEKSANDAR_JEVTIC.pdf">
+													Ant System-based Adaptive Edge Detector:</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>Two algorithms- Ant System Algorithm for Edge
+													Detection and Ant System-based Broken-edge Linking
+													Algorithm inspired by the foraging behavior of natural ant
+													colonies are used.</li>
+												<li><b>Ant System Algorithm for Edge Detection:</b> This
+													method requires that a set of images is extracted from the
+													original grayscale image using a nonlinear image
+													enhancement technique called Multiscale Adaptive Gain, and
+													then the modified AS algorithm is applied to detect the
+													edges on each of the extracted images.</li>
+												<li><b>Ant System-based Broken-edge Linking
+														Algorithm:</b> It is complementary to edge detection and is
+													used to connect the broken edges in order to form the
+													closed contours (outline) that separate the regions of
+													interest.</li>
+												<li>This model is created with a bottom-up approach,
+													using the rules of local interactions between the ants and
+													the environment (digital image). This model is
+													decentralized, self-organized, autonomous and adaptive to
+													the changes in the environment.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/DTA.jpg"
+							target="_blank"> <img alt="" src="si/img/DTA.jpg" height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://oa.upm.es/7206/1/ALEKSANDAR_JEVTIC.pdf">
+													Distributed Task Allocation in Large, Autonomous,
+													Multirobot Swarm System: </a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>Distributed Bees Algorithm (DBA) is used which is
+													inspired by the foraging behaviour of colonies of bees in
+													nature.</li>
+												<li>When the bees find the food source, the scout bees
+													return to the hive and perform a famous waggle dance in
+													order to recruit other bees. The information about the
+													richness and location of the source is passed using direct
+													communication. In the same way, here the robots are
+													designed to use broadcast communication to inform other
+													robots in the range about the estimated location and the
+													quality of the found target.</li>
+												<li>The objective of the proposed algorithm is to
+													assign the robots in a swarm to the found targets in such a
+													way that the final distribution is proportional to the
+													targets&#8217; qualities.</li>
+												<li>Distributed Bees Algorithm provides the robot swarm
+													with scalability in terms of the number of robots and
+													number of targets and with adaptability to a
+													non-uniform distribution of the targets&#8217; qualities.</li>
+												<li>The bottom-up design topology inherent to
+													bio-inspired multirobot systems provides them with one or
+													more of the following features, such as being autonomous,
+													scalable, robust and adaptive to changes in their
+													environment.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/ImageSegmentation.png"
+							target="_blank"> <img alt=""
+							src="si/img/ImageSegmentation.png" height=200></a> <br />
+						Figure: Comparison of the segmentation results for a ROI
+						mammogram, 256 × 256 pixels. The ASCA (Ant System-based Cluster Algorithm) extracted ﬁve clusters;
+
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://oa.upm.es/7206/1/ALEKSANDAR_JEVTIC.pdf">
+													Cluster Analysis for Image Segmentation:</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>Image segmentation is an important preprocessing
+													step in applications of computer vision. The objective is
+													to partition the image into homogeneous regions that share
+													certain visual characteristics.</li>
+												<li>ASCA (Ant System-based Clustering Algorithm) is
+													used which consists of three consecutive parts, namely:<br />
+													a) Pheromone accumulation, b) Local pheromone summing, and
+													c) Data labeling
+												</li>
+												<li>a) Pheromone accumulation is used to create a
+													pheromone map of the data set to be clustered and b) Local
+													pheromone summing in which smooth pheromone surface is
+													obtained by locally summing all the pheromone trails and c)
+													Data labeling in which all the nodes are grouped in their
+													respective cluster and the all the clusters are
+													extracted from the data set.</li>
+												<li>It is used to extract the pixel clusters with a
+													similar intensity level of grey.</li>
+												<li>This tool is used in computer vision applications
+													such as mammography for the cancer risk analysis and breast
+													cancer where the less representative pixels are precisely
+													the most interesting because they represent a variation
+													with respect to healthy tissue.</li>
+												<li>The important feature of the proposed ASCA
+													algorithm is automatic extraction of clusters.</li>
+												<li>ASCA algorithm outperformed 1D-SOM, k-Means, FCM
+													and PFCM algorithms in detection of small, atypical regions
+													of the image.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!--  </div>-->
+
+				<!--  <div id="items" class="row-fluid">-->
+				<div class="item masonry-brick"
+					style="width: 860px; background: transparent;">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+
+								<table align=center>
+									<tr>
+										<td><h3>
+												<a name="useCases">Use cases:</a>
+											</h3>Possible applications of Swarm Intelligence may be limited
+											only by imagination.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/BAnimation.png"
+							target="_blank"> <img alt="" src="si/img/BAnimation.png"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="https://www.youtube.com/watch?v=-jF5sAqBp4w&index=60&list=PLfdXcwZcywjzzUzplET_gKwu5lY87F1qk">
+													Behavioral Animation: </a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>The particle swarm technology concepts are being
+													applied in computer graphics area and can be found
+													in Batman Returns (1992), The Lion King (1994) and From
+													Dusk Till Dawn (1996).</li>
+												<li>The most impressive usage are probably the immense
+													battle sequences in the trilogy Lord of the Rings where
+													about 250,000 individual fighters.</li>
+												<li>For making this possible a new software was written
+													named <b>MASSIVE</b> which controls this mass of agent
+													technology-equipped computer actors and their
+													states.
+												</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://vinodwadhawan.blogspot.in/2013/07/87-artificial-distributed-intelligence.html">
+													Distributed Perceptive Networks</a> - </b>These are the examples
+											of emergence of intelligence and artificial swarm intelligence in artificial complex
+											systems.</td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>A system comprising hundreds or thousands of motes
+													linked by radio transceivers and sensors can spontaneously
+													emerge as a perceptive network and a mote is a <a
+													href="http://en.wikipedia.org/wiki/Microelectromechanical_systems">
+														micromachine</a> which is the unit of <a
+													href="http://en.wikipedia.org/wiki/Smartdust">SmartDust</a>,
+													each unit installed with <a
+													href="http://en.wikipedia.org/wiki/TinyOS">TinyOS.</a>
+												</li>
+												<li>Multi-hop networking approach is followed and as a
+													result, parallelism is achieved so that if a particular
+													mote stops functioning, there is enough redundancy and
+													parallelism in the network that other motes reconfigure the
+													connectivity to bypass that mote. <br /><br /> <img
+													src="si/img/distributed_artificial_intelligence.jpg"
+													height="200">
+												</li>
+												<li>The technology of placing the brain, the sensors,
+													and the actuators of an artificial intelligent structure in
+													differnt locations known as Pervasive Computing.<br /><br /> <img
+													src="si/img/PerceptiveComputing.jpg">
+												</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title"
+							href="si/img/microsat_commintel.gif" target="_blank"> <img
+							alt="" src="si/img/microsat_commintel.gif" height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="http://www.bluetronix.net/rd.htm">
+													Micro-satellite Swarm:</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>Bluetronix is looking to develop control packages
+													and communications suites founded upon swarm intelligence
+													algorithms enabling collaboration of micro-satellite swarms, 
+													 tasking of individuals, and fuzzy system
+													identification for adaptive sensor fusion dictating rule
+													based commands.</li>
+												<li>Individual satellites, each equipped with their own
+													rule-based controller, will perform assigned sub-tasks
+													based on their own directives.</li>
+												<li>This design could be easily integrated on a wide
+													variety of mobile platforms including satellites, Earth
+													Science sensor networks, ground stations, and small
+													aircraft, all connected in an ad-hoc fashion.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title"
+							href="http://www.bluetronix.net/Animationdemo_Final.html"
+							target="_blank"> <img alt="" src="si/img/BluetronixSwarm.png"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.bluetronix.net/Animationdemo_Final.html">
+													Bluetronix Swarm Mobile Ad Hoc Network: </a></b></td>
+									</tr>
+									<tr>
+										<td>The Swarm Autonomous Routing Algorithm (SARA) is
+											performed by simple communication node devices for node to
+											node communications in a network, especially a Mobile Ad hoc
+											NETwork (MANET). These networks are decentralized with the
+											ability to scale to 100s to thousands of connections. They
+											also self-learn and organize as they operate and adapt as new
+											and old nodes enter and exit the network under dynamic
+											conditions.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title"
+							href="http://www.regenenergy.com/solutions/" target="_blank">
+							<img alt="" src="si/img/SwarmEnergyManagement.png" height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.regenenergy.com/solutions/"> Robust,
+													Flexible, Easy-to-use, Swarm Energy Management:</a></b></td>
+									</tr>
+									<tr>
+										<td>REGEN Energy’s wireless automated demand management
+											and demand response controllers can be easily installed onto
+											any electrical heating, cooling or discretionary electrical
+											load. Once installed, the REGEN controllers work together
+											like a swarm of bees, intelligently communicate and
+											manage the duty cycles of the loads being controlled.
+											Utilizing REGEN’s patented swarm-based intelligence, the
+											controllers dramatically reduce peak electrical demand by up
+											to 25% in commercial and light industrial properties and
+											allow for effective scheduling of overnight and weekend
+											loads.<br /> <img src="si/img/RegenLoadBalancing.png">
+											<br /> Fig: Swarm Energy Management employs swarm logic to
+											allow equipments in buildings to communicate and coordinate to
+											minimize the number and size of loads unnecessarily running
+											concurrently, thereby reducing peak demand.
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://arxiv.org/ftp/arxiv/papers/1003/1003.4075.pdf">
+													SLAM with PSO: </a> - </b><a
+											href="http://www.youtube.com/watch?v=CYlb6ZcCSzU&list=PL6EsRWGuFOWUZQ5w8DJChAOYMkTJsqitz&index=25">Simultaneous
+												Localization and Mapping with Particle Swarm Optimization</a></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>Estimate the pose (position and orientation) of a robot and map the
+													environment at the same time.</li>
+												<li>Learning a map and locating the robot
+													simultaneously.</li>
+												<li><b>Localization:</b> Inferring the location given a map.</li>
+												<li><b>Mapping:</b> Inferring a map given the locations of robot. </li>
+												<li><b>FastSLAM</b> is a framework for simultaneous
+													localization using a Rao-Blackwellized particle filter. In
+													FastSLAM, particle filter is used for the mobile robot pose
+													(position and orientation) estimation, and an Extended
+													Kalman Filter (EKF) is used for the feature location’s
+													estimation. However, FastSLAM degenerates over time.</li>
+												<li><b>A Neuro-Fuzzy Multi Swarm FastSLAM Framework</b>
+													both Extended kalman filter for landmark feature estimation, and
+													a particle filter based on particle swarm optimization are
+													presented to overcome the impoverishment of FastSLAM.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/SPF.png"
+							target="_blank"> <img alt="" src="si/img/SPF.png" height=200></a>
+						<br /> Figure: The Swarm Planning Framework - Here the landscape
+						operates as a swarm, so when the external pressure moves them away
+						from the equilibrium, then it simply shifts to another stable state through its self-organization capability  and this
+						regime shift is visualized as a ﬁtness landscape.
+
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.researchgate.net/publication/237082848_Swarm_Planning_for_Climate_Change_An_Alternative_Pathway_for_Resilience">
+													Swarm Planning:</a></b> The development of a planning methodology
+											to deal with climate adaptation.</td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>Swarm planning is a theoretical and practical approach
+													to deal with the uncertain future.</li>
+												<li>Swarm planning theory is used in two pilot designs:
+													<b>Post-carbon world</b> and <b>Pre-adaptive landscape</b>
+													and is compared with regular planning process. The
+													results are presented in the form of two new landscapes: <b>the
+														Zero-Fossil Region</b>, where the design provides a spatial
+													framework for a complete renewable energy supply, <br/>and <b>the
+														Net Carbon Capture Landscape</b>, in which adaptation and
+													mitigation strategies are designed to become carbon
+													positive.
+												</li>
+												<li>The comparison illuminates the potential advantages
+													of swarm planning to tackle the climate change threats.</li>
+												<li>It increases the ﬂexibility of spatial systems in
+													two ways: Assist the change in spatial land use over time;
+													and catalyse the emergence of autonomous and more
+													resilient developments.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/SwarmRobotics.jpg"
+							target="_blank"> <img alt="" src="si/img/SwarmRobotics.jpg"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.hindawi.com/journals/isrn.robotics/2013/608164/">Swarm
+													Robotics:</a></b></td>
+									</tr>
+									<tr>
+										<td>Swarm Robotics is the study of how large number of
+											relatively simple physically embodied agents can be designed
+											such that a desired collective behaviour emerges from the
+											local interactions among agents and between the agents and
+											the environment. It has some special characteristics, which
+											are found in swarms of insects, that is, decentralised
+											control, lack of synchronisation, simple and quasi
+											identical members.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/BayesianNetwork.JPG"
+							target="_blank"> <img alt="" src="si/img/BayesianNetwork.JPG"
+							height=200>
+						</a><br/>
+						Fig: The DAG given above depicts a different model in
+											which the alarm will ring when activated by high temperature
+											and/or coolant water pipe leakage in the reactor.
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://goanna.cs.rmit.edu.au/~xiaodong/publications/si-ieee-tec-special-issue-editorial-2009.pdf">
+													Bayesian Network Structure Learning:</a></b></td>
+									</tr>
+									
+									<tr>
+										<td><ul>
+												<li>Bayesian Network / Belief Network is a
+													probabilistic directed acyclic graphical model that
+													represents a set of random variables and their conditional
+													dependencies.</li>
+												<li>A Bayesian network could represent the
+													probabilistic relationship between diseases and symptoms.
+													Given symptoms, the network can be used to compute the
+													probability of the presence of various diseases.</li>
+												<li>Bayesian networks that model the sequence of variables
+													(e.g. speech signals or protein sequences) are called
+													dynamic Bayesian networks.</li>
+												<li>Two novel approaches (ChainACO and K2ACO) based on
+													chain structure model and K2 greedy search are being used
+													for for Bayesian network structure learning. </li>
+												<li>It consists of
+													two phases: Construct chains (i.e. contruct the order of nodes
+													according to dependencies), Apply K2ACO to the best
+													ordering found and returns the best structure. </li>
+												<li>Example: Given a
+													node ordering X1,X2,. . . ,Xn, we deﬁne the chain structure
+													by adding edges between successive nodes. Thus Xi is the
+													sole parent of Xi+1. Ei is the edge from Xi to Xi+1 <br /><br />
+													<a href="si/img/chainACO.png" target="_blank"> <img
+														src="si/img/chainACO.png" height=200></a><br/><br/>
+												</li>
+												<li>ACO-based Bayesian network learning algorithm
+													outperforms greedy search and simulated annealing
+													algorithms.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/FaultTolerant.png"
+							target="_blank"> <img alt="" src="si/img/FaultTolerant.png"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://iridia.ulb.ac.be/supp/IridiaSupp2008-003/vids/fireflyfaulttolerance.mpg">
+													From Fireflies to Fault Tolerant Swarm:</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>It is a decentralized system that detects
+													non-operational robots in the swarm by engineering a flash
+													light system on the robots.</li>
+												<li>This flash light system is similar to some
+													firefies species which can synchronize their flashing.</li>
+												<li>This robotic approach creates the ability for
+													operational robots to flash in unison; failed robots can
+													thus be detected as those that will not flash in
+													synchrony with the rest of the robot team.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.kuleuven.be/samenwerking/advise/Researchm/Projects/Docs/sins">
+													SINS: Sound INterfacing through the Swarm</a></b></td>
+									</tr>
+									<tr>
+										<td><u>Fundamental concept of acoustic:</u><br /> <a
+											href="si/img/Cause-effect_diagram_for_acoustics.svg.png"
+											target="_blank"> <img
+												src="si/img/Cause-effect_diagram_for_acoustics.svg.png"
+												height=200></a></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>Audio INterface is generally the hardware that
+													connects your microphones and other audio gear to your
+													computer. A typical audio interface converts analog signal
+													into the digital audio information that your computer can
+													process.</li>
+												<li>Acoustic sensing is generally the sense of hearing.</li>
+												<li>In SINS swarm system, every device will have a
+													wireless connection, hence leading to trillions of
+													connected devices and sensors known as the the sensory swarm.</li>
+												<li>The SINS performance and lifetime objectives are to
+													achieve high-resolution acoustic activity detection and
+													beyond 1-meter accurate acoustic localization, while
+													achieving above 1-year lifetime on 1 button
+													cell battery.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/swarmanoid.jpg"
+							target="_blank"> <img alt="" src="si/img/swarmanoid.jpg"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.youtube.com/watch?v=M2nn1X9Xlps">
+													Swarmanoid: Towards Humanoid Robotic Swarms</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>The Swarmanoid is an autonomous group of
+													approximately 60 robots who work together like a SWAT
+													(acronym for "Special Weapons And Tactics") team to
+													accomplish the most mundane tasks.</li>
+												<li>This machine swarm is made up of flying eye-bots,
+													gripping hand-bots, and wheeled foot-bots.</li>
+												<li>The main scientific objective of this research
+													project is the design, implementation and control of a
+													novel distributed robotic system.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/robobee.png"
+							target="_blank"> <img alt="" src="si/img/robobee.png"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.wallstreetdaily.com/wallstreet-research/video/RoboBees_WSD.php">
+													Flight of the Robobee: The Rise of Swarm Robotics</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>RoboBee is a tiny robot capable of tethered flight,
+													developed by a research robotics team at Harvard
+													University.</li>
+												<li>A swarm of robotic bees</li>
+												<li>RoboBees will be deployed on search and rescue
+													missions, or used for military surveillance.</li>
+												<li>RoboBees could even pollinate crops and flowers,
+													thus replicate the behavior of their biological cousins.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/PAM.jpg"
+							target="_blank"> <img alt="" src="si/img/PAM.jpg" height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.mind.ilstu.edu/curriculum/ants_nasa/ants_pam.php"
+												name="ANTS"> ANTS / PAM: Autonomous Nanotechnological
+													Swarm - Mission Architecture / Prospecting Asteroid Mission
+													- ANTS application</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>The primary objective of PAM is the exploration of
+													the asteroid belt in search of resources and materials with
+													astrobiologically relevant origins and signatures.</li>
+												<li>PAM plans to drive a carrier spaceship and have it
+													self-assemble and launch 1000 small exploration spacecrafts
+													(picocrafts) that are to travel through and analyze asteroid
+													belt.</li>
+												<li>Each spacecraft includes a team leader (ruler), one or
+													more messengers, and a number of workers.</li>
+												<li>The messengers are needed to connect the team
+													members when they cannot connect directly, due to a long
+													distance or a barrier.</li>
+												<li>Once launched, spacecraft opportunistically
+													self-organise into several sub-swarms and simultaneously
+													analyse different asteroids over the several years belt
+													traversal.</li>
+												<li>Each sub-swarm can repeatedly search for, detect
+													and navigate towards interesting asteroid targets; mesaure
+													and create 3D models of analysed asteroids; send adequate
+													asteroid models to an Earth center.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/SwarmTile.jpg"
+							target="_blank"> <img alt="" src="si/img/SwarmTile.jpg"
+							height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.shadiramosdesign.com/SwarmTile.html">Swarm
+													Tile: Human interface tiles that are designed to understand their
+							environment and react to various conditions. </a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>The Cellular Intelligence system is a network
+													constructed of modular and human interface tiles that are
+													designed to understand their environment and react to
+													various conditions.</li>
+												<li>Each cell or module is composed of smart sensing
+													technology and one or multiple LED actuators.</li>
+												<li><b>Strategy:</b> Each cell evaluates its surrounding
+													environment through sensing technology or through network
+													connections. If a stimulus is present, the information is
+													processed using an arduino microcontroller, which is an
+													open-source electronics prototyping platform, and an
+													appropriate response is sent back to the cell itself or to
+													another cell in the system and actuation is carried out
+													through LED lights.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/Nanoma.png"
+							target="_blank"> <img alt="" src="si/img/Nanoma.png"
+							height=200></a>Fig: NANOMA based breast cancer therapy<br/><br/><a
+							class="image" title="Title" href="si/img/drugVector.png"
+							target="_blank"> <img alt="" src="si/img/drugVector.png"
+							height=200></a> Fig: A drug delivery vector
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a href="http://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CB4QFjAA&url=http%3A%2F%2Fcordis.europa.eu%2Ffp7%2Fict%2Fmicro-nanosystems%2Fdocs%2F4thmnbs-slides%2F4thmnbs2010-day2-nanoma-ferreira_en.pdf&ei=dBkYVKHbJ8KgugTvoYCQBA&usg=AFQjCNHatOz4SBMxZsJgNT8VDTynyoxUPA&sig2=RLZp6V3uuoPuJUnyeEZcQQ&bvm=bv.75097201,d.c2E&cad=rja">NANOMA: Nano-Actuators and
+													Nano-sensors for Medical Applications: </a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>NANOMA aims at developing drug delivery
+													microrobotic systems composed of nanoActuators and
+													nanoSensors for the propulsion and navigation of
+													ferromagnetic microcapsules in the cardiovascular system
+													through the induction on magnetic gradients.</li>
+												<li>New approach for breast cancer therapy based on
+													Nanoma concept:<br />
+													<ol>
+														<li>MRI based detection and tracking</li>
+														<li>MRI based in-vivo propulsion and navigation</li>
+														<li>Targeted drug delivery using functionalized
+															nanovectors</li>
+													</ol>
+												</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/HIVE.png"
+							target="_blank"> <img alt="" src="si/img/HIVE.png" height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.aerohive.com/products/software-management/hiveos">
+													HiveOS Network Operating System: </a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>HiveOS enables Aerohive devices to organize into
+													groups, or hives, which allows functionality like fast
+													roaming, user-based access control and fully stateful
+													firewall policies, as well as additional security and RF
+													networking features - all without the need for a
+													centralized or dedicated controller.</li>
+												<li>HiveOS has two primary feature sets - Wi-fi
+													features and Routing features</li>
+												<li>All Aerohive devices support the feature-rich
+													HiveOS Cooperative Control architecture.</li>
+												<li>Aerohive provides a pure cloud-enabled management
+													solution for your wired and wireless network designed by
+													Apple Education Experts.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title"
+							href="si/img/roadToNanoRobotics.png" target="_blank"> <img
+							alt="" src="si/img/roadToNanoRobotics.png" height=200>
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.bionano.neu.edu/NanoRobotics_in_Medicine.pdf">
+													Nanorobots / Nanobots / DNA nanotechnology in Medical Applications:</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>It constitutes any smart structure capable of
+													actuation, sensing, signaling, information processing,
+													intelligence, manipulation and nano scale
+													(10-9 m) swarm behaviour.</li>
+												<li>Nanorobots could propose solutions at the most of the
+													nanomedicine problems.</li>
+												<li>NanoRobotics – An Example: Ultra-local Drug
+													Delivery</li>
+												<li>The technology is known as <a
+													href="http://www.dna.caltech.edu/Papers/rothemund-origami-iccad05.pdf">DNA
+														origami</a>, or alternately DNA nanotechnology.
+												</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<table>
+							<tr>
+								<td><a class="image" title="Title"
+									href="http://genome.cshlp.org/content/13/4/703/F1.expansion.html"
+									target="_blank"> <img alt="" src="si/img/biclustering.png"
+										height=200></a></td>
+							</tr>
+							<tr>
+								<td>Fig: Spectral Biclustering of Microarray Data:
+									Coclustering Genes and Conditions</td>
+							</tr>
+						</table>
+
+
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://waset.org/publications/9997844/comparative-study-on-swarm-intelligence-techniques-for-biclustering-of-microarray-gene-expression-data">
+													Biclustering of Microarray Gene Expression Data: </a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>Gene expression is the process by which information
+													from a gene is used in the synthesis of a functional gene
+													product often termed as protein.</li>
+												<li>In Gene regulatory network, genes have been
+													regarded as nodes in a network, with inputs being proteins
+													such as transcription factors, and outputs being the level
+													of gene expression.</li>
+												<li>Microarray is a 2D array on a solid substrate.
+													Microarray gene expression data is a 2D array of gene
+													expression data under some condition. Microarray gene
+													expression data plays a vital role in biological processes, gene
+													regulation and disease mechanisms.<br /> <br /> <a
+													href="si/img/geneExpressionData.png" target="_blank"> <img
+														src="si/img/geneExpressionData.png" height=200></a><br /> <br />
+												</li>
+												<li>In the Gene Expression context, clustering is
+													defined as the grouping of genes based on the similarity of
+													their condition feature profile whereas the biclustering
+													finds subsets of genes that show similar patterns under a
+													specific subset of experimental conditions or in short it
+													finds regulatory patterns. For example: for microarray
+													data, strong up-regulation of certain genes under a cancer
+													condition of a particular type. Such a simultaneous
+													classiﬁcation of samples and features is called
+													biclustering (or co-clustering).</li>
+												<li>The algorithmic concepts of the Particle Swarm
+													Optimization (PSO), Shuffled Frog Leaping (SFL) and Cuckoo
+													Search (CS) algorithms have been analyzed for the four
+													benchmark gene expression dataset and the experiment
+													results show that CS outperforms PSO and SFL for 3 datasets
+													and SFL give better performance in one dataset.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/geneSelection.jpg"
+							target="_blank"> <img alt="" src="si/img/geneSelection.jpg"
+							height=200>
+
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://ercim-news.ercim.eu/en82/special/swarm-intelligence-approach-for-accurate-gene-selection-in-dna-microarrays">
+													Swarm Intelligence Approach for Accurate Gene Selection in
+													DNA Microarrays: </a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>It is the challenge of extracting the specific
+													genes responsible for the given illness.</li>
+												<li>The goal is to minimise classification errors whilst
+													using the smallest possible set of genes to explain the
+													results provided by the given DNA microarray.</li>
+												<li>This model consists of a particle swarm
+													optimization (PSO) algorithm, in which a feature selection
+													mechanism facilitates identification of small samples of
+													informative genes among thousands of genes.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/BreastCancer.jpg"
+							target="_blank"> <img alt="" src="si/img/BreastCancer.jpg"
+							height=200>
+
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.sciencedirect.com/science/article/pii/S1532046414000124">
+													Computer-aided Detection of Breast Cancer on Mammograms: A
+													Swarm Intelligence Optimized Wavelet Neural Network
+													Approach</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>The proposed abnormality detection algorithm is
+													based on extracting Laws Texture Energy Measures from the
+													mammograms and classifying the suspicious regions by
+													applying a pattern classifier.</li>
+												<li>The method has been applied to real clinical database of
+													216 mammograms collected from mammogram screening centers.</li>
+											</ul></td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.cs.nott.ac.uk/~rzb/publications/ideal13.pdf">
+													Potential of Swarm Intelligence in Big Data Analytics: </a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+												<li>The main focus is on data.</li>
+												<li>The other three properties of big data analytics,
+													which include the high dimensionality of data, the
+													dynamical change of data, and the multi-objective 
+													problems.</li>
+												<li>Based on the combination of swarm intelligence and
+													data mining techniques, we can have better understanding of
+													the big data analytics problems, and then we can design more
+													effective algorithms to solve real-world big data analytics
+													problems.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.slideshare.net/mnigdelis/machine-learning-tools-and-particle-swarm-optimization-for-contentbased-search-in-big-multimedia-databases">Machine
+													Learning Tools and Particle Swarm Optimization for
+													Content-Based Search in Big Multimedia Databases: </a></b><br /> <br />
+											Here PSO's role is in data clustering, image retrieval and
+											function minimization in solving this problem.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/traffic.png"
+							target="_blank"> <img alt="" src="si/img/traffic.png">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://www.lcc.uma.es/~eat/pdf/eaai2012.pdf">Swarm
+													Intelligence for Trafﬁc Light Scheduling: </a></b><br/> 
+													<ul><li>In this context,
+											our main objective is to ﬁnd optimized cycle programs (OCP)
+											for all the trafﬁc lights located in a given urban area.</li>
+											<li>Speciﬁcally, cycle programs are refereed to the time span a
+											set of trafﬁc lights (in a junction) keep their color states.</li>
+											<li>At the same time, these programs have to coordinate trafﬁc
+											lights in adjacent intersections with the aim of improving
+											the global ﬂow of vehicles circulating according to trafﬁc
+											regulations.</li></ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item masonry-brick">
+					<div class="picture">
+						<a class="image" title="Title" href="si/img/routing.png"
+							target="_blank"> <img alt="" src="si/img/routing.png">
+						</a>
+						<div class="item-content">
+							<div class="description">
+								<table>
+									<tr>
+										<td><b><a
+												href="http://faculty.washington.edu/paymana/papers/globecom01_2.pdf">AntNet: Ant-based Swarm Intelligence Algorithm for Routing in Communication Networks</a></b></td>
+									</tr>
+									<tr>
+										<td><ul>
+										<li>It is an improvement of ant-based algorithms achieved via
+											dynamic programming.</li>
+										<li> In the AntNet algorithm, routing is
+											determined by means of very complex interactions of forward
+											and backward network exploration agents (ants).</li>
+										<li> The idea
+											behind this sub division of agents is to allow the backward
+											ants to utilize the useful information gathered by the
+											forward ants on their trip from source to destination.</li>
+										<li> Based
+											on this principle, no node routing updates are performed by
+											the forward ants. Their only purpose in life is to report
+											network delay conditions to the backward ants, in the form of
+											trip times between each network node. The backward ants
+											inherit this raw data and use it to update the routing table
+											of the nodes.</li>
+											</ul></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div id="items" class="row-fluid" style="margin-left: 30px;">
+				<br />
+				<h3>References:</h3>
+				<br />
+				<ol>
+					<li><a
+						href="http://www.bionano.neu.edu/NanoRobotics_in_Medicine.pdf">Nanorobots
+							/ Nanobots / DNA nanotechnology in Medical Applications</a></li>
+					<li><a href="http://www.youtube.com/watch?v=M2nn1X9Xlps">Swarmanoid:
+							Towards Humanoid Robotic Swarms</a></li>
+					<li><a href="http://swarmframework.org/">Swarm Framework:
+							The ultimate Platform as a Service used for the distributed
+							computation in the cloud</a></li>
+
+					<li><a
+						href="http://ercim-news.ercim.eu/en82/special/swarm-intelligence-approach-for-accurate-gene-selection-in-dna-microarrays">Swarm
+							Intelligence Approach for Accurate Gene Selection in DNA
+							Microarrays</a></li>
+					<li><a
+						href="http://www.slideshare.net/mnigdelis/machine-learning-tools-and-particle-swarm-optimization-for-contentbased-search-in-big-multimedia-databases">Particle
+							Swarm Optimization for Content-Based Search in Big Multimedia
+							Databases</a></li>
+					<li><a
+						href="http://www.wallstreetdaily.com/wallstreet-research/video/RoboBees_WSD.php">Flight
+							of the robobee / Swarm of Robotic Bees</a></li>
+					<li><a
+						href="http://www.cs.nott.ac.uk/~rzb/publications/ideal13.pdf">Potential
+							of Swarm Intelligence in Big Data Analytics</a></li>
+
+					<li><a
+						href="https://www.youtube.com/watch?v=-jF5sAqBp4w&index=60&list=PLfdXcwZcywjzzUzplET_gKwu5lY87F1qk">Behavioral
+							Animation / Movie which Utilize Particle Swarm Optimization </a></li>
+					<li><a href="http://education.mit.edu/starlogo/">StarLogo:
+							A programmable modeling environment for exploring the workings of
+							decentralized systems / real-life phenomena </a></li>
+					<li><a href="http://www.shadiramosdesign.com/SwarmTile.html">Swarm
+							Tile: Human interface tiles that are designed to understand their
+							environment and react to various conditions</a></li>
+					<li><a
+						href="http://www.mind.ilstu.edu/curriculum/ants_nasa/ants_pam.php">ANTS
+							(Autonomous Nanotechnological Swarm) / PAM (Prospecting Asteroid
+							Mission, an application of ANTS architecture for the survey of
+							surface areas like mainbelt asteroids)</a></li>
+					<li><a
+						href="http://www.researchgate.net/publication/220888984_A_bio-inspired_algorithm_for_searching_relationships_in_Social_Networks">Sense
+							of Smell - Ant Colony Optimization for searching relationships in
+							social networks</a></li>
+					<li><a
+						href="http://waset.org/publications/9997844/comparative-study-on-swarm-intelligence-techniques-for-biclustering-of-microarray-gene-expression-data">Biclustering
+							of Microarray Gene Expression Data for finding subsets of genes
+							that show similar patterns under a specific subset of
+							experimental conditions which is very helpful for gene regulation
+							and disease mechanism</a></li>
+					<li><a
+						href="http://www.sciencedirect.com/science/article/pii/S1532046414000124">Computer-aided
+							detection of breast cancer on mammograms: An approach for
+							detection of breast abnormalities in digital mammograms ( X-ray
+							image of the breast used to screen for breast cancer) using
+							Particle Swarm Optimized Wavelet Neural Network (PSOWNN)</a></li>
+					<li><a
+						href="http://genome.cshlp.org/content/13/4/703/F1.expansion.html">Spectral
+							Biclustering of Microarray Data</a></li>
+					<li><a
+						href="http://www.aamas-conference.org/Proceedings/aamas08/proceedings/pdf/paper/AAMAS08_0254.pdf">Protoswarm:
+							A Language for Programming Multi-Robot Systems Using the
+							Amorphous Medium Abstraction</a></li>
+					<li><a
+						href="http://www.aerohive.com/products/software-management/hiveos">HiveOS
+							Network Operating System: It enables Aerohive devices to organize
+							into groups or hives for the functionality like fast roaming</a></li>
+					<li><a
+						href="http://www.dna.caltech.edu/Papers/rothemund-origami-iccad05.pdf">Design
+							of DNA Origami / the utility of strand invasion for DNA
+							nanomachines</a></li>
+					<li><a
+						href="http://www.hindawi.com/journals/isrn.robotics/2013/608164/">Swarm
+							Robotics: Co-ordinate the large number of robots in a distributed
+							and decentralised way</a></li>
+					<li><a
+						href="http://www.infotech.monash.edu.au/srlab/a-distributed-framework-for-supporting-3d-swarming-applications.pdf">A
+							Distributed Framework for Supporting 3D Swarming Applications
+							such as In-flight wireless sensor networks </a></li>
+					<li><a
+						href="http://www.kuleuven.be/samenwerking/advise/Researchm/Projects/Docs/sins">Sound
+							INterfacing through the sensory swarm with a focus on acoustic
+							sensing</a></li>
+					<li><a href="http://www.swarm-organ.eu/content/about-project">Swarm
+							Organ relevant to both biological morphogenesis (the shaping of
+							an organism) and distributed technology such as robotic swarms
+							and amorphous computing</a></li>
+					<li><a
+						href="http://www.researchgate.net/publication/237082848_Swarm_Planning_for_Climate_Change_An_Alternative_Pathway_for_Resilience">Swarm
+							Planning for Climate Change - An approach to deal with uncertain
+							future </a></li>
+
+					<li><a
+						href="http://www3.nd.edu/~dddas/AFOSR/resources/papers/ndiccs2014.pdf">Control
+							of Artificial Swarms with DDDAS (Dynamic Data Driven Application
+							System - improves analytic and predictive capability of an
+							application)</a></li>
+					<li><a
+						href="http://arxiv.org/ftp/arxiv/papers/1003/1003.4075.pdf">A
+							Neuro-Fuzzy Multi Swarm FastSLAM Framework: The simultaneous
+							localization and mapping of robots to perform autonomous tasks
+							such as exploration </a></li>
+
+					<li><a
+						href="http://www.aaai.org/Papers/AAAI/2008/AAAI08-301.pdf">The
+							Swarm Application Framework: A tool for the development of swarm
+							applications more intuitive </a></li>
+					<li><a
+						href="http://aser.ornl.gov/cui/workshop/presentation/Swarm%20Intelligence%20Bio-inspired%20Emergent%20Intelligence.pdf">The
+							Bottom-up strategy for Engineering Emergent Behavior </a></li>
+					<li><a
+						href="http://blog.locut.us/2008/10/07/swarm-a-true-distributed-programming-language/">Swarm
+							- A true distributed programming language / The Swarm prototype
+							in scala</a></li>
+
+
+
+					<li><a
+						href="http://goanna.cs.rmit.edu.au/~xiaodong/publications/si-ieee-tec-special-issue-editorial-2009.pdf">Using
+							a Local Discovery Ant Algorithm for Bayesian Network Structure
+							Learning</a></li>
+					<li><a
+						href="http://iridia.ulb.ac.be/supp/IridiaSupp2008-003/vids/fireflyfaulttolerance.mpg">From
+							Fireflies to Fault Tolerant Swarms</a></li>
+					<li><a href="http://oa.upm.es/7206/1/ALEKSANDAR_JEVTIC.pdf">Cluster
+							Analysis for Image Segmentation useful for the applications like
+							mammography for the cancer risk analysis</a></li>
+					<li><a
+						href="http://pakacademicsearch.com/pdf-files/eng/321/184-197%20Vol%203,%20No%205%20(2011).pdf">Ant
+							based Clustering Algorithm for the applications like Web Usage Mining - users' navigational patterns extraction from web logs </a></li>
+					
+
+					<li><a
+						href="http://self-chord.icar.cnr.it/applications/j2ee-modules/sc/">Self-Chord:
+							A P2P (Peer to Peer) system inspired from ant algorithm</a></li>
+					<li><a
+						href="http://sourceforge.net/projects/myra/files/myra/3.5.0/">Myra:
+							A cross-platform Ant Colony Optimisation framework written in
+							Java and provides a specialised data mining layer</a></li>
+					<li><a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=4610103&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4610103">Antare:
+							An Ant-Inspired P2P Information System for a Self-Structured Grid
+					</a></li>
+
+
+					<li><a
+						href="http://www.aco-metaheuristic.org/aco-code/public-software.html">AntCar:
+							A program for solving the car sequencing problem</a></li>
+
+
+					<li><a
+						href="http://www.cleveralgorithms.com/nature-inspired/swarm/ant_system.html">Ant
+							System to exploit historic and heuristic information to construct solutions</a></li>
+					<li><a
+						href="http://www.cleveralgorithms.com/nature-inspired/swarm/bees_algorithm.html">Bees
+							Algorithms to locate and explore good sites within a problem search space</a></li>
+					<li><a
+						href="http://www.cleveralgorithms.com/nature-inspired/swarm/bfoa.html">Bacterial
+							Foraging Optimization Algorithm to allow the cells to collectively swarm toward optima</a></li>
+					<li><a
+						href="http://www.cleveralgorithms.com/nature-inspired/swarm/pso.html">PSO (Particle Swarm
+Optimisation) Algorithm to locate the optima in a multi-dimensional hyper-volume</a></li>
+
+					<li><a
+						href="http://www.dcsc.tudelft.nl/~bdeschutter/pub/rep/08_002.pdf">A
+							General Modeling Framework for Swarms: A framework that separates
+							the physical parts and behaviour from decision making capability
+							of the swarms</a></li>
+
+
+					<li><a
+						href="http://www.lero.ie/sites/default/files/UCD_Emil_Vassev_ver2.FinalDraft.pdf">Autonomic
+							System Specification Language: A framework for formal
+							specification, verification and code generation of autonomic
+							systems</a></li>
+
+
+
+
+					<li><a
+						href="http://www.sciweavers.org/read/so-grid-a-self-organizing-grid-featuring-bio-inspired-algorithms-273804">So-Grid:
+							A Self-organizing Grid featuring bio-inspired algorithms </a></li>
+					<li><a
+						href="http://www.slideshare.net/biswajitpanday/cuckoo-search-35892331">Cuckoo
+							Search Algorithm: Inspired by the obligate brood parasitism of some cuckoo species by laying their eggs in the nests of other host birds and is used for optimization problems like to solve Knapsack problems etc</a></li>
+
+
+
+					<li><a
+						href="http://www.youtube.com/watch?v=CYlb6ZcCSzU&list=PL6EsRWGuFOWUZQ5w8DJChAOYMkTJsqitz&index=25">Localization
+							and Mapping with Particle Swarm Optimisation</a></li>
+					<li><a
+						href="http://www.aisb.org.uk/convention/aisb08/proc/proceedings/11%20Swarm%20Intelligence/11.pdf">A
+							Unified Framework for Swarm Based Image Analysis</a></li>
+			</div>
+			<div class="clearfix"></div>
+			
+		</div>
+	</div>
+
+
+	<footer id="footer"></footer>
+	<script type="text/javascript"
+		src="http://code.jquery.com/jquery-latest.js"></script>
+
+	<script src="si/js/bootstrap/js/bootstrap.min.js"></script>
+	<script src="si/js/jquery.masonry.min.js"></script>
+	<script src="si/js/script.js"></script>
+	<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+	</script>
+
+	<div id='pageshare' title="Share This With Your Friends">
+		<div class='sbutton' id='gb'>
+			<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+			<fb:like layout="box_count" show_faces="false" font=""></fb:like>
+		</div>
+		<div class='sbutton' id='gplusone'>
+			<script type="text/javascript"
+				src="https://apis.google.com/js/plusone.js"></script>
+			<g:plusone size="tall"></g:plusone>
+		</div>
+		<div class='sbutton' id='su'>
+			<script src="http://www.stumbleupon.com/hostedbadge.php?s=5"></script>
+		</div>
+		<div class='sbutton' id='rt'>
+			<a href="http://twitter.com/share" class="twitter-share-button"
+				data-count="vertical">Tweet</a>
+			<script src='http://platform.twitter.com/widgets.js'
+				type="text/javascript"></script>
+		</div>
+		<div class='floatbutton' id='linkedin'>
+			<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+			<script type="IN/Share" data-counter="top"></script>
+		</div>
+	</div>
+
+</body>
+</html>
