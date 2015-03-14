@@ -6,12 +6,16 @@
 package net.cofares.data;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import net.cofares.objects.TestC;
 
 /**
  *
  * @author pascalfares
+ * Implémenter un CRUD avec des données sous forme de clé valeur (aliste)
+ * ici utilisation de HashMap pour modélisé les (clé,valeur)
+ * 
  */
 public class Datas {
     
@@ -20,7 +24,7 @@ public class Datas {
      */
     public static HashMap<Integer,TestC> datasTest;
     
-    public Datas(){
+    public static void initDatas(){
         //Initialisations pour test
         datasTest = new HashMap<>();
         datasTest.put(1, new TestC(1, "Un", 101, "Un pour A"));
@@ -29,25 +33,25 @@ public class Datas {
         datasTest.put(4, new TestC(4, "Quatre", 104, "Quatre  A"));
     }
     
-    public ArrayList<TestC> findAll(){
-        return new ArrayList(datasTest.values());
+    public static Collection<TestC> findAll(){
+        return datasTest.values();
     }
     
-    public TestC find(int id) {
+    public static TestC find(int id) {
         return datasTest.get(id);
     }
     
-    public void create(TestC tc){
+    public static void create(TestC tc){
         //Faudrais verifier que tc.getX() n'existe pas
         datasTest.put(tc.getX(),tc);
     }
     
-    public void update(int id, TestC tc){
+    public static void update(int id, TestC tc){
         //Faudrait verifier que id existe
         datasTest.put(id,tc);
     }
     
-    public void delete(int id){
+    public static void delete(int id){
         datasTest.remove(id);
     }
 }

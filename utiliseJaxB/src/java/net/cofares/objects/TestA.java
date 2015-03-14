@@ -13,8 +13,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author pascalfares
  */
-@XmlRootElement
-class TestA implements Serializable{
+@XmlRootElement (name = "TestA")
+public class TestA implements Serializable{
     private int idA;
     private String valeur;
 
@@ -33,7 +33,7 @@ class TestA implements Serializable{
     /**
      * @return the idA
      */
-    @XmlElement
+    
     public int getIdA() {
         return idA;
     }
@@ -48,7 +48,7 @@ class TestA implements Serializable{
     /**
      * @return the valeur
      */
-    @XmlElement
+  
     public String getValeur() {
         return valeur;
     }

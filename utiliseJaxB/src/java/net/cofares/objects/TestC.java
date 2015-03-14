@@ -6,21 +6,21 @@
 package net.cofares.objects;
 
 import java.io.Serializable;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
 
 /**
  *
  * @author pascalfares
  */
 @XmlRootElement
-@XmlSeeAlso(TestA.class)
 public class TestC implements Serializable{
     private int x;
     private String s;
     private TestA ta;
     
+    public TestC() {
+        
+    }
     public TestC (int id, String v, TestA ta) {
         x=id;
         s=new String(v);
@@ -35,7 +35,7 @@ public class TestC implements Serializable{
     /**
      * @return the x
      */
-    @XmlElement
+   
     public int getX() {
         return x;
     }
@@ -50,7 +50,7 @@ public class TestC implements Serializable{
     /**
      * @return the s
      */
-    @XmlElement
+    
     public String getS() {
         return s;
     }
@@ -65,7 +65,6 @@ public class TestC implements Serializable{
     /**
      * @return the ta
      */
-    @XmlElement
     public TestA getTa() {
         return ta;
     }
@@ -76,4 +75,6 @@ public class TestC implements Serializable{
     public void setTa(TestA ta) {
         this.ta = ta;
     }
+
+    
 }
