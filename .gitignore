@@ -12,3 +12,6 @@
 /utiliseJaxB/dist/
 /utiliseJaxB/build/
 /testRestCall/nbproject/private/
+private/
+build/
+dist/
