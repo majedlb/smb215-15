@@ -33,6 +33,8 @@ public class RestCall {
         for (TestC c : ltc){
             System.out.println(c);
         }
+        
+        restCall.putJson(tc, TestC.class);
     }
     
 }

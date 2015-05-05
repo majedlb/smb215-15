@@ -40,7 +40,7 @@ public class PourTestC {
      * @return an instance of net.cofares.objects.TestC
      */
     @GET
-    @Produces("application/json")
+    @Produces("application/xml")
     public Collection<TestC> getAll() {
         return Datas.findAll();
     }
