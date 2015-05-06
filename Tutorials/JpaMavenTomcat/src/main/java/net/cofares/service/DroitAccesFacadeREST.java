@@ -108,6 +108,13 @@ public class DroitAccesFacadeREST  {
     }
 
     @GET
+    @Path("{id}")
+    @Produces({"application/xml", "application/json"})
+    public List<DroitAcces> findByUserName(@PathParam("id") String id) {
+        //net.cofares.jpamaventomcat.DroitAccesPK key = getPrimaryKey(id);
+        return dac.findDAByUserName(id);
+    }
+    @GET
     
     @Produces({"application/xml", "application/json"})
     public List<DroitAcces> findAll() {
