@@ -84,7 +84,7 @@ public class DroitAcces implements Serializable {
 
     @Override
     public String toString() {
-        return "net.cofares.jpamaventomcat.DroitAcces[ droitAccesPK=" + droitAccesPK + " ]";
+        return "DroitAcces[ droitAccesPK=" + droitAccesPK + ":" + users+ " ]";
     }
     
 }

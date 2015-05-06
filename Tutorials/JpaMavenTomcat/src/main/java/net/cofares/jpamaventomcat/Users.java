@@ -163,7 +163,7 @@ public class Users implements Serializable {
 
     @Override
     public String toString() {
-        return "net.cofares.jpamaventomcat.Users[ userId=" + userId + " ]";
+        return "Users[ userId=" + userId + " ]";
     }
     
 }
