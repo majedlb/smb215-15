@@ -34,30 +34,7 @@ import net.cofares.jpamaventomcat.DroitAccesPK;
 public class DroitAccesFacadeREST  {
     private EntityManager em;
 
-    private DroitAccesPK getPrimaryKey(PathSegment pathSegment) {
-        /*
-         * pathSemgent represents a URI path segment and any associated matrix parameters.
-         * URI path part is supposed to be in form of 'somePath;userId=userIdValue;typedroit=typedroitValue;spec=specValue'.
-         * Here 'somePath' is a result of getPath() method invocation and
-         * it is ignored in the following code.
-         * Matrix parameters are used as field names to build a primary key instance.
-         */
-        net.cofares.jpamaventomcat.DroitAccesPK key = new net.cofares.jpamaventomcat.DroitAccesPK();
-        javax.ws.rs.core.MultivaluedMap<String, String> map = pathSegment.getMatrixParameters();
-        java.util.List<String> userId = map.get("userId");
-        if (userId != null && !userId.isEmpty()) {
-            key.setUserId(new java.lang.Long(userId.get(0)));
-        }
-        java.util.List<String> typedroit = map.get("typedroit");
-        if (typedroit != null && !typedroit.isEmpty()) {
-            key.setTypedroit(typedroit.get(0));
-        }
-        java.util.List<String> spec = map.get("spec");
-        if (spec != null && !spec.isEmpty()) {
-            key.setSpec(new java.lang.Short(spec.get(0)));
-        }
-        return key;
-    }
+    
     private DroitAccesJpaController dac;
     public DroitAccesFacadeREST() {
         EntityManagerFactory emf
@@ -99,13 +76,7 @@ public class DroitAccesFacadeREST  {
         }
     }
 
-    @GET
-    @Path("{id}")
-    @Produces({"application/xml", "application/json"})
-    public DroitAcces find(@PathParam("id") PathSegment id) {
-        net.cofares.jpamaventomcat.DroitAccesPK key = getPrimaryKey(id);
-        return dac.findDroitAcces(key);
-    }
+   
 
     @GET
     @Path("{id}")
