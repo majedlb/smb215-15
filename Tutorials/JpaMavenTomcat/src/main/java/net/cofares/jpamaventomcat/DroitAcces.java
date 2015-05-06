@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "DroitAcces.findAll", query = "SELECT d FROM DroitAcces d"),
     @NamedQuery(name = "DroitAcces.findByUserId", query = "SELECT d FROM DroitAcces d WHERE d.droitAccesPK.userId = :userId"),
+    @NamedQuery(name = "DroitAcces.findByUserName", query = "SELECT d FROM DroitAcces d WHERE d.users.username = :userName"),   
     @NamedQuery(name = "DroitAcces.findByTypedroit", query = "SELECT d FROM DroitAcces d WHERE d.droitAccesPK.typedroit = :typedroit"),
     @NamedQuery(name = "DroitAcces.findBySpec", query = "SELECT d FROM DroitAcces d WHERE d.droitAccesPK.spec = :spec")})
 public class DroitAcces implements Serializable {

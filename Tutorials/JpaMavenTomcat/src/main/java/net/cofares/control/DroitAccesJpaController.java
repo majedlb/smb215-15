@@ -11,6 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import net.cofares.control.exceptions.NonexistentEntityException;
@@ -131,6 +132,15 @@ public class DroitAccesJpaController implements Serializable {
         }
     }
 
+    public List<DroitAcces> findDAByUserName(String un) {
+        EntityManager em = getEntityManager();
+        TypedQuery<DroitAcces> query
+                = em.createNamedQuery("DroitAcces.findByUserName", DroitAcces.class);
+        query.setParameter("userName", un);
+        List<DroitAcces> results = query.getResultList();
+        return results;
+    }
+
     public List<DroitAcces> findDroitAccesEntities() {
         return findDroitAccesEntities(true, -1, -1);
     }
@@ -176,5 +186,5 @@ public class DroitAccesJpaController implements Serializable {
             em.close();
         }
     }
-    
+
 }
