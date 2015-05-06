@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.cofares.controle;
 
 import java.io.Serializable;
@@ -24,6 +19,11 @@ import net.cofares.entity.Payementlog;
  */
 public class PayementlogJpaController implements Serializable {
 
+    /**
+     * Création de la factory Entitymanager a partir de son identifiant
+     * dans persistatence.xml : persistence-unit name="jpaTomcatPU"
+     * @param PU : Nom de persistence-unit
+     */
     public PayementlogJpaController(String PU) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU);
         this.emf = emf;
@@ -141,6 +141,5 @@ public class PayementlogJpaController implements Serializable {
         } finally {
             em.close();
         }
-    }
-    
+    }   
 }
