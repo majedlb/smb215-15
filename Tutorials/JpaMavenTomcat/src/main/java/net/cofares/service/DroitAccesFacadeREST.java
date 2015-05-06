@@ -6,7 +6,6 @@
 package net.cofares.service;
 
 import java.util.List;
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
@@ -25,8 +24,8 @@ import net.cofares.jpamaventomcat.DroitAccesPK;
  *
  * @author pascalfares
  */
-@Stateless
-@Path("net.cofares.jpamaventomcat.droitacces")
+
+@Path("droitacces")
 public class DroitAccesFacadeREST extends AbstractFacade<DroitAcces> {
     @PersistenceContext(unitName = "net.cofares_JpaMavenTomcat_war_0.0PU")
     private EntityManager em;
