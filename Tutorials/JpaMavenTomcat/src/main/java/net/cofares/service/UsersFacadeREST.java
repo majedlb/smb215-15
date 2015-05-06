@@ -31,13 +31,12 @@ import net.cofares.jpamaventomcat.Users;
  */
 @Path("users")
 public class UsersFacadeREST {
-    @PersistenceContext(unitName = "net.cofares_JpaMavenTomcat_war_0.0PU")
     private EntityManager em;
     private UsersJpaController uac;
     public UsersFacadeREST() {
         EntityManagerFactory emf
-                = Persistence.createEntityManagerFactory("net.cofares_JpaMavenTomcat_war_0.0P");
-        UsersJpaController uac = new UsersJpaController(emf);
+                = Persistence.createEntityManagerFactory("net.cofares_JpaMavenTomcat_war_0.0PU");
+        uac = new UsersJpaController(emf);
         em = uac.getEntityManager();
     }
 
@@ -75,7 +74,9 @@ public class UsersFacadeREST {
     @Path("{id}")
     @Produces({"application/xml", "application/json"})
     public Users find(@PathParam("id") Long id) {
+        //return uac.findUsers(id);
         return uac.findUsers(id);
+        
     }
 
     @GET

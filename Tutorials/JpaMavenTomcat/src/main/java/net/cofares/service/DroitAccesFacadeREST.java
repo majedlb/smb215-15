@@ -61,8 +61,8 @@ public class DroitAccesFacadeREST  {
     private DroitAccesJpaController dac;
     public DroitAccesFacadeREST() {
         EntityManagerFactory emf
-                = Persistence.createEntityManagerFactory("net.cofares_JpaMavenTomcat_war_0.0P");
-        DroitAccesJpaController dac = new DroitAccesJpaController(emf);
+                = Persistence.createEntityManagerFactory("net.cofares_JpaMavenTomcat_war_0.0PU");
+        dac = new DroitAccesJpaController(emf);
         em = dac.getEntityManager();
     }
 
