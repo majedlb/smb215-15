@@ -68,12 +68,9 @@ public class DroitAccesFacadeREST  {
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") PathSegment id) {
-        net.cofares.jpamaventomcat.DroitAccesPK key = getPrimaryKey(id);
-        try {
-            dac.destroy(key);
-        } catch (NonexistentEntityException ex) {
-            Logger.getLogger(DroitAccesFacadeREST.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //net.cofares.jpamaventomcat.DroitAccesPK key = getPrimaryKey(id);
+        //dac.destroy(key);
+        
     }
 
    
