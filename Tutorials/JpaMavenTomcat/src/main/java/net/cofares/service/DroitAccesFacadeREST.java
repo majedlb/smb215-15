@@ -6,8 +6,11 @@
 package net.cofares.service;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -17,6 +20,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.PathSegment;
+import net.cofares.control.DroitAccesJpaController;
+import net.cofares.control.exceptions.NonexistentEntityException;
 import net.cofares.jpamaventomcat.DroitAcces;
 import net.cofares.jpamaventomcat.DroitAccesPK;
 
@@ -25,9 +30,8 @@ import net.cofares.jpamaventomcat.DroitAccesPK;
  * @author pascalfares
  */
 
-@Path("droitacces")
-public class DroitAccesFacadeREST extends AbstractFacade<DroitAcces> {
-    @PersistenceContext(unitName = "net.cofares_JpaMavenTomcat_war_0.0PU")
+@Path("da")
+public class DroitAccesFacadeREST  {
     private EntityManager em;
 
     private DroitAccesPK getPrimaryKey(PathSegment pathSegment) {
@@ -54,30 +58,45 @@ public class DroitAccesFacadeREST extends AbstractFacade<DroitAcces> {
         }
         return key;
     }
-
+    private DroitAccesJpaController dac;
     public DroitAccesFacadeREST() {
-        super(DroitAcces.class);
+        EntityManagerFactory emf
+                = Persistence.createEntityManagerFactory("net.cofares_JpaMavenTomcat_war_0.0P");
+        DroitAccesJpaController dac = new DroitAccesJpaController(emf);
+        em = dac.getEntityManager();
     }
 
     @POST
-    @Override
+    
     @Consumes({"application/xml", "application/json"})
     public void create(DroitAcces entity) {
-        super.create(entity);
+        try {
+            dac.create(entity);
+        } catch (Exception ex) {
+            Logger.getLogger(DroitAccesFacadeREST.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @PUT
     @Path("{id}")
     @Consumes({"application/xml", "application/json"})
     public void edit(@PathParam("id") PathSegment id, DroitAcces entity) {
-        super.edit(entity);
+        try {
+            dac.edit(entity);
+        } catch (Exception ex) {
+            Logger.getLogger(DroitAccesFacadeREST.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") PathSegment id) {
         net.cofares.jpamaventomcat.DroitAccesPK key = getPrimaryKey(id);
-        super.remove(super.find(key));
+        try {
+            dac.destroy(key);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(DroitAccesFacadeREST.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @GET
@@ -85,31 +104,31 @@ public class DroitAccesFacadeREST extends AbstractFacade<DroitAcces> {
     @Produces({"application/xml", "application/json"})
     public DroitAcces find(@PathParam("id") PathSegment id) {
         net.cofares.jpamaventomcat.DroitAccesPK key = getPrimaryKey(id);
-        return super.find(key);
+        return dac.findDroitAcces(key);
     }
 
     @GET
-    @Override
+    
     @Produces({"application/xml", "application/json"})
     public List<DroitAcces> findAll() {
-        return super.findAll();
+        return dac.findDroitAccesEntities();
     }
 
     @GET
     @Path("{from}/{to}")
     @Produces({"application/xml", "application/json"})
     public List<DroitAcces> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
-        return super.findRange(new int[]{from, to});
+        return dac.findDroitAccesEntities(from, to);
     }
 
     @GET
     @Path("count")
     @Produces("text/plain")
     public String countREST() {
-        return String.valueOf(super.count());
+        return String.valueOf(dac.getDroitAccesCount());
     }
 
-    @Override
+   
     protected EntityManager getEntityManager() {
         return em;
     }
