@@ -12,6 +12,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -23,6 +24,7 @@ import javax.ws.rs.Produces;
 import net.cofares.control.UsersJpaController;
 import net.cofares.control.exceptions.IllegalOrphanException;
 import net.cofares.control.exceptions.NonexistentEntityException;
+import net.cofares.jpamaventomcat.DroitAcces;
 import net.cofares.jpamaventomcat.Users;
 
 /**
@@ -76,6 +78,15 @@ public class UsersFacadeREST {
     public Users find(@PathParam("id") Long id) {
         //return uac.findUsers(id);
         return uac.findUsers(id);
+        
+    }
+    
+    @GET
+    @Path("d/{id}")
+    @Produces({"application/xml", "application/json"})
+    public List<Users> findByDtoit(@PathParam("id") String tdoit) {
+        //return uac.findUsers(id);
+        return uac.findUsersByDroit(tdoit);
         
     }
 

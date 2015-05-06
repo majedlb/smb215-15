@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
 import net.cofares.control.exceptions.IllegalOrphanException;
 import net.cofares.control.exceptions.NonexistentEntityException;
 import net.cofares.jpamaventomcat.Users;
@@ -187,6 +188,15 @@ public class UsersJpaController implements Serializable {
         }
     }
 
+    public List<Users> findUsersByDroit(String td) {
+        EntityManager em = getEntityManager();
+        TypedQuery<Users> query
+                = em.createNamedQuery("Users.findByDroit", Users.class);
+        query.setParameter("tDroit", td);
+        List<Users> results = query.getResultList();
+        return results;
+    }
+
     public int getUsersCount() {
         EntityManager em = getEntityManager();
         try {
@@ -199,5 +209,5 @@ public class UsersJpaController implements Serializable {
             em.close();
         }
     }
-    
+
 }

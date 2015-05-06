@@ -21,9 +21,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.PathSegment;
 import net.cofares.control.DroitAccesJpaController;
-import net.cofares.control.exceptions.NonexistentEntityException;
 import net.cofares.jpamaventomcat.DroitAcces;
-import net.cofares.jpamaventomcat.DroitAccesPK;
 
 /**
  *
@@ -43,8 +41,7 @@ public class DroitAccesFacadeREST  {
         em = dac.getEntityManager();
     }
 
-    @POST
-    
+    @POST   
     @Consumes({"application/xml", "application/json"})
     public void create(DroitAcces entity) {
         try {
