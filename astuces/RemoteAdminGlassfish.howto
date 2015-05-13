@@ -1,0 +1,2 @@
+asadmin change-admin-password --domain_name [DOMAIN_NAME]
+asadmin enable-secure-admin --port [PORT_NAME]
