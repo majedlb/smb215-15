@@ -1,0 +1,3 @@
+[submodule "Utilitaires/JSON-java"]
+	path = Utilitaires/JSON-java
+	url = git@github.com:douglascrockford/JSON-java.git
