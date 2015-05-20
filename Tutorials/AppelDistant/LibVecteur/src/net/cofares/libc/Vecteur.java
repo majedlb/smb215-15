@@ -67,7 +67,10 @@ public class Vecteur implements Serializable {
     public String marshaling() {
         StringWriter sb = new StringWriter();
         PrintWriter printWriter = new PrintWriter(sb);
-        printWriter.printf("{%d,%d}", getX(), getY());      
+        
+        printWriter.printf("{%d,%d}", getX(), getY());  
+        
+        
         return sb.toString();
     }
     
