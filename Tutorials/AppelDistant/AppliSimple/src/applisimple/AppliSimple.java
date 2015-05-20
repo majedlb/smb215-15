@@ -7,9 +7,9 @@ package applisimple;
 
 
 import java.io.IOException;
-import net.cofares.libc.MessagesVecteurs;
 import net.cofares.libc.Vecteur;
-import net.cofares.metier.FonctionsSurVecteur;
+
+
 
 
 /**
@@ -32,22 +32,19 @@ public class AppliSimple {
         
         v2.setX(15);
         v2.setY(25);
-        
+      /**  
         //Appel du traitement En local
-        Vecteur resadd = FonctionsSurVecteur.add(v1, v2);
+        Vecteur resadd = net.cofares.metier.FonctionsSurVecteur.add(v1, v2);
         
         //Presenter les résultat
         System.out.println("En local "+ v1 + v2 + resadd);
+       */ 
         
         //Appel du traitement a distance (utilisation d'un stub (proxy)
         Vecteur resDistant= net.cofares.stub.FonctionsSurVecteur.add(v1, v2);
-         System.out.println("A distance "+ v1 + v2 + resadd);
+        System.out.println("A distance "+ v1 + v2 + resDistant);
         
-        System.out.println("Unmarshal {10,20} = "+Vecteur.unmarshal("{10,20}"));
-        MessagesVecteurs mv = MessagesVecteurs.unmarshallMessageVecteur("{{10,20},{15,20}}");
-        System.out.println("Unmarsjal coupe vecteur {{10,20},{15,20}"+ mv);
-        System.out.println(mv.getV1());
-        System.out.println(mv.getV2());
+            
     }
     
 }
