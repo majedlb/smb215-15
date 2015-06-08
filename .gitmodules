@@ -4,3 +4,6 @@
 [submodule "efsm_workflow"]
 	path = efsm_workflow
 	url = git@github.com:pascalfares/efsm_workflow.git
+[submodule "OAuth-Google"]
+	path = OAuth-Google
+	url = git@github.com:mohamad-dekmak/OAuth-Google.git
