@@ -7,3 +7,6 @@
 [submodule "OAuth-Google"]
 	path = OAuth-Google
 	url = git@github.com:mohamad-dekmak/OAuth-Google.git
+[submodule "ibrahim-Keyrouz"]
+	path = ibrahim-Keyrouz
+	url = git@github.com:Ibrahim-Keyrouz/SMB215.git
