@@ -2,11 +2,14 @@
 	path = Utilitaires/JSON-java
 	url = git@github.com:douglascrockford/JSON-java.git
 [submodule "efsm_workflow"]
-	path = efsm_workflow
+	path = Utilitaires/efsm_workflow
 	url = git@github.com:pascalfares/efsm_workflow.git
 [submodule "OAuth-Google"]
-	path = OAuth-Google
+	path = Modules/OAuth-Google
 	url = git@github.com:mohamad-dekmak/OAuth-Google.git
 [submodule "ibrahim-Keyrouz"]
-	path = ibrahim-Keyrouz
+	path = Modules/ibrahim-Keyrouz
 	url = git@github.com:Ibrahim-Keyrouz/SMB215.git
+[submodule "Modules/antoine-ghosn"]
+	path = Modules/antoine-ghosn
+	url = git@github.com:antoine-ghosn/SMB215.git
